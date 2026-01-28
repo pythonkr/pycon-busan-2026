@@ -1,0 +1,14 @@
+.timetable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tablet and desktop: Grid layout option */
+@media (min-width: 1024px) {
+  .timetable-list {
+    gap: 1.5rem;
+  }
+}
