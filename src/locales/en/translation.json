@@ -1,0 +1,28 @@
+{
+  "logo": "PyCon Busan 2026",
+  "about": "About",
+  "program": "Program",
+  "session": "Session",
+  "financialAid": "Financial Aid",
+  "store": "Store",
+  "sponsor": "Sponsor",
+  "language": "Language",
+
+  "pycon": "PyCon Busan 2026",
+  "health": "Health and Safety",
+  "volunteer": "Volunteer",
+  "team": "Organizing Team",
+
+  "timetable": "Timetable",
+  "sprint": "Sprint",
+  "lightning": "Lightning Talk",
+
+  "schedule": "Session Schedule",
+  "keynotes": "Keynotes",
+
+  "tickets": "Tickets",
+  "tutorial": "Tutorial",
+
+  "prospectus": "Prospectus",
+  "patrons": "Patrons"
+}

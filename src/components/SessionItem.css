@@ -1,0 +1,119 @@
+/* SessionItem.css */
+
+.session-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.75rem;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.session-item:hover {
+  transform: translateY(-2px);
+  background-color: #222;
+}
+
+/* Image container */
+.session-item-img {
+  width: 6rem;
+  height: 6rem;
+  min-width: 6rem;
+  min-height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #555;
+  flex-shrink: 0;
+}
+
+/* Image inside container */
+.session-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Info container */
+.session-item-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.session-item-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #febd99;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.session-item-info h4:hover {
+  color: #ffb347;
+  text-decoration: underline;
+}
+
+.session-item-info p {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Speakers */
+.session-item-speakers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  font-size: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.session-item-speakers kbd {
+  background-color: #def080;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.65rem;
+}
+
+/* Tags */
+.session-item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.session-item-tags kbd {
+  background-color: #b0a8fe;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.65rem;
+  border-radius: 3px;
+  color: black;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  .session-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .session-item-img {
+    width: 5rem;
+    height: 5rem;
+    min-width: 5rem;
+    min-height: 5rem;
+  }
+
+  .session-item-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .session-item-info p {
+    font-size: 0.8rem;
+  }
+}
