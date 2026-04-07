@@ -1,125 +1,155 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 import { useTranslation } from "react-i18next";
 
+
 function Navbar() {
-  const [open, setOpen] = useState(false);
-  const closeMenu = () => setOpen(false);
+  const [openMenu, setOpenMenu] = useState(null);
   const { t, i18n } = useTranslation();
+
+  const closeMenu = () => setOpenMenu(null);
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
+
         <Link to="/" className="navbar-logo">
           {t("PyCon Busan 2026")}
         </Link>
+
         <ul className="navbar-menu">
-          {/* ABOUT MENU */}
+
+          {/* ABOUT */}
           <li
             className="dropdown"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}>
-            <Link to="/pyconbusan" className="navbar-link">{t("about")}</Link>
-            {open && (
+            onMouseEnter={() => setOpenMenu("about")}
+            onMouseLeave={closeMenu}
+          >
+            <Link to="/pyconbusan" className="navbar-link">
+              {t("about")}
+            </Link>
+
+            {openMenu === "about" && (
               <ul className="dropdown-menu">
-                <li><Link to="/pyconbusan" className="dropdown-link" onClick={closeMenu}>PyCon Busan 2026</Link></li>
-                <li><Link to="/safety" className="dropdown-link" onClick={closeMenu}>Health and Safety</Link></li>
-                <li><a href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html"
-                  className="dropdown-link" onClick={closeMenu} target="_blank" rel="noopener noreferrer">Code of Conduct</a></li>
-                <li><Link to="/volunteer" className="dropdown-link" onClick={closeMenu}>Volunteer</Link></li>
-                <li><Link to="/team" className="dropdown-link" onClick={closeMenu}>Organizing Team</Link></li>
+                <li><Link to="/pyconbusan" className="dropdown-link">PyCon Busan 2026</Link></li>
+                <li><Link to="/safety" className="dropdown-link">Health and Safety</Link></li>
+                <li>
+                  <a
+                    href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="dropdown-link"
+                  >
+                    Code of Conduct
+                  </a>
+                </li>
+                <li><Link to="/volunteer" className="dropdown-link">Volunteer</Link></li>
+                <li><Link to="/team" className="dropdown-link">Organizing Team</Link></li>
               </ul>
             )}
-
           </li>
 
-          {/* PROGRAM MENU */}
+          {/* PROGRAM */}
           <li
             className="dropdown"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}>
-            <Link to="/timetable" className="navbar-link">{t("program")}</Link>
-            {open && (
+            onMouseEnter={() => setOpenMenu("program")}
+            onMouseLeave={closeMenu}
+          >
+            <Link to="/timetable" className="navbar-link">
+              {t("program")}
+            </Link>
+
+            {openMenu === "program" && (
               <ul className="dropdown-menu">
-                <li><Link to="/timetable" className="dropdown-link" onClick={closeMenu}>{t("timetable")}</Link></li>
-                <li><Link to="/sprint" className="dropdown-link" onClick={closeMenu}>{t("sprint")}</Link></li>
-                <li><Link to="/lighttalk" className="dropdown-link" onClick={closeMenu}>{t("lightning")}</Link></li>
+                <li><Link to="/timetable" className="dropdown-link">{t("timetable")}</Link></li>
+                <li><Link to="/sprint" className="dropdown-link">{t("sprint")}</Link></li>
+                <li><Link to="/lighttalk" className="dropdown-link">{t("lightning")}</Link></li>
               </ul>
             )}
-
           </li>
 
-          {/* Session MENU */}
+          {/* SESSION */}
           <li
             className="dropdown"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}>
-            <Link to="/session" className="navbar-link">{t("session")}</Link>
-            {open && (
+            onMouseEnter={() => setOpenMenu("session")}
+            onMouseLeave={closeMenu}
+          >
+            <Link to="/session" className="navbar-link">
+              {t("session")}
+            </Link>
+
+            {openMenu === "session" && (
               <ul className="dropdown-menu">
-                <li><Link to="/schedule" className="dropdown-link" onClick={closeMenu}>{t("schedule")}</Link></li>
-                <li><Link to="/keynotes" className="dropdown-link" onClick={closeMenu}>{t("keynotes")}</Link></li>
-                <li><Link to="/session" className="dropdown-link" onClick={closeMenu}>{t("session")}</Link></li>
+                <li><Link to="/schedule" className="dropdown-link">{t("schedule")}</Link></li>
+                <li><Link to="/keynotes" className="dropdown-link">{t("keynotes")}</Link></li>
+                <li><Link to="/session" className="dropdown-link">{t("session")}</Link></li>
               </ul>
             )}
-
           </li>
-          {/* Session MENU */}
+
+          {/* FINANCIAL AID */}
           <li>
-            <Link to="/finance" className="navbar-link">{t("financialAid")}</Link>
+            <Link to="/finance" className="navbar-link">
+              {t("financialAid")}
+            </Link>
           </li>
 
-          {/* Store MENU */}
+          {/* STORE */}
           <li
             className="dropdown"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}>
-            <Link to="/session" className="navbar-link">{t("store")}</Link>
-            {open && (
+            onMouseEnter={() => setOpenMenu("store")}
+            onMouseLeave={closeMenu}
+          >
+            <Link to="/tickets" className="navbar-link">
+              {t("store")}
+            </Link>
+
+            {openMenu === "store" && (
               <ul className="dropdown-menu">
-                <li><Link to="/tickets" className="dropdown-link" onClick={closeMenu}>{t("tickets")}</Link></li>
-                <li><Link to="/tutorial" className="dropdown-link" onClick={closeMenu}>{t("tutorial")}</Link></li>
+                <li><Link to="/tickets" className="dropdown-link">{t("tickets")}</Link></li>
+                <li><Link to="/tutorial" className="dropdown-link">{t("tutorial")}</Link></li>
               </ul>
             )}
-
           </li>
 
-          {/* Sponsoring MENU */}
+          {/* SPONSOR */}
           <li
             className="dropdown"
-            onMouseEnter={() => setOpen(true)}
-            onMouseLeave={() => setOpen(false)}>
-            <Link to="/prospectus" className="navbar-link">{t("sponsor")}</Link>
-            {open && (
+            onMouseEnter={() => setOpenMenu("sponsor")}
+            onMouseLeave={closeMenu}
+          >
+            <Link to="/prospectus" className="navbar-link">
+              {t("sponsor")}
+            </Link>
+
+            {openMenu === "sponsor" && (
               <ul className="dropdown-menu">
-                <li><Link to="/prospectus" className="dropdown-link" onClick={closeMenu}>{t("prospectus")}</Link></li>
-                <li><Link to="/patrons" className="dropdown-link" onClick={closeMenu}>{t("patrons")}</Link></li>
+                <li><Link to="/prospectus" className="dropdown-link">{t("prospectus")}</Link></li>
+                <li><Link to="/patrons" className="dropdown-link">{t("patrons")}</Link></li>
               </ul>
             )}
-
           </li>
 
-          {/* Language MENU */}
-          <li
-            className={`lang-link ${i18n.language === "kr" ? "active-lang" : ""}`}
-            onClick={() => {
-              i18n.changeLanguage("kr");
-              closeMenu();
-            }}
-          >
-            KR
+          {/* LANGUAGE SWITCH */}
+          <li>
+            <div className="lang-switch">
+              <div
+                className={`lang-option ${i18n.language === "kr" ? "active" : ""}`}
+                onClick={() => i18n.changeLanguage("kr")}
+              >
+                KR
+              </div>
+
+              <div
+                className={`lang-option ${i18n.language === "en" ? "active" : ""}`}
+                onClick={() => i18n.changeLanguage("en")}
+              >
+                EN
+              </div>
+            </div>
           </li>
 
-          <li
-            className={`lang-link ${i18n.language === "en" ? "active-lang" : ""}`}
-            onClick={() => {
-              i18n.changeLanguage("en");
-              closeMenu();
-            }}
-          >
-            EN
-          </li>
         </ul>
       </div>
     </nav>

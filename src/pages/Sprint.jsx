@@ -24,17 +24,17 @@ function Sprint() {
 
             <div className="event-item">
               <strong>🙋‍♀ 모집 기간 (KST)</strong>
-              <p>2025.08.04 (월) - 2025.08.15 (금)</p>
+              <p>2026.05.06 (수) - 2026.08.14 (금)</p>
             </div>
 
             <div className="event-item">
               <strong>🗓 스프린트 진행일 (KST)</strong>
-              <p>2025.08.15 (금)</p>
+              <p>2026.08.14 (금)</p>
             </div>
 
             <div className="event-item">
               <strong>🏢 위치</strong>
-              <p>동국대학교 서울캠퍼스 신공학관</p>
+              <p>somewhere</p>
             </div>
 
           </div>

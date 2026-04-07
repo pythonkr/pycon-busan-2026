@@ -100,7 +100,7 @@ function PyConBusan() {
         </a>
 
         <a
-          href="https://maps.app.goo.gl/panXesZJ7zrSpipw5"
+          href="https://maps.app.goo.gl/8wiKDJtZwAts659B6"
           target="_blank"
           rel="noopener noreferrer"
           className="map-btn"

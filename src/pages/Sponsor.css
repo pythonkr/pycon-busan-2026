@@ -3,7 +3,9 @@
 .sponsor-page {
   padding: 80px 20px;
   min-height: 100vh;
-  background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  background-image:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("../images/pycon-bg.png");
   font-family: Arial, sans-serif;
   color: white;
 }
@@ -162,6 +164,7 @@
 
 /* faq */
 
+
 .sponsor-faq {
   max-width: 850px;
   margin: auto;
@@ -188,7 +191,14 @@
 
 .patrons-page {
   padding: 80px 20px;
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("../images/pycon-bg.png");
+
   text-align: center;
+  color: white;
 }
 
 .patrons-title {
@@ -203,31 +213,66 @@
 
 .patrons-list {
   display: grid;
+
   grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  max-width: 850px;
-  margin: auto;
+
+  max-width: 900px;
+
+  margin: 50px auto;
+
   gap: 25px;
 }
 
 .patron-card {
-  background: white;
-  color: #333;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+
   padding: 28px;
-  border-radius: 12px;
-  transition: 0.25s;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  transition: all 0.25s ease;
 }
 
 .patron-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
 .patron-name {
   font-size: 19px;
   margin-bottom: 8px;
-  font-weight: bold;
+  font-weight: 600;
+  color: white;
 }
 
 .patron-message {
   font-style: italic;
-  color: #555;
+  color: rgba(255,255,255,0.85);
+}
+
+.sponsor-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.sponsor-contact {
+  color: #ddd;
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.sponsor-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  transition: all 0.2s ease;
+}
+
+.sponsor-contact a:hover {
+  color: #4a9eff;
+  border-bottom: 1px solid #4a9eff;
 }

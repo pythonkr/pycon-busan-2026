@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Sponsor.css";
+import sponsorLogo from "../images/sponsor.png";
 
 function Prospectus() {
 
@@ -9,7 +10,7 @@ function Prospectus() {
       {/* Header */}
       <section className="sponsor-hero">
         <img
-          src="/images/sponsor_logo_lg.png"
+          src={sponsorLogo}
           alt="Sponsor Logo"
           className="sponsor-logo"
         />
