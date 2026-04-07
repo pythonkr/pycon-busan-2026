@@ -2,8 +2,11 @@ import React from "react";
 import "./Footer.css";
 import { FaEnvelope, FaYoutube, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -15,7 +18,7 @@ const Footer = () => {
           Busan, Republic of Korea |
           Representative :  |
           Phone Number :  |
-          Business Registration Number : 
+          Business Registration Number :
         </p>
 
         <p className="footer-info">
@@ -25,14 +28,14 @@ const Footer = () => {
         </p>
 
         <button className="footer-btn">
-          CHECK BUSINESS REGISTRATION INFORMATION
+          {t("checkBusiness")}
         </button>
 
         {/* Policy links */}
         <div className="footer-links">
-          <a href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html">PyCon Korea Code of Conduct</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Privacy Policy</a>
+          <a href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html">{t("codeOfConduct")}</a>
+          <a href="#">{t("termsOfService")}</a>
+          <a href="#">{t("privacyPolicy")}</a>
         </div>
 
         {/* Social icons */}

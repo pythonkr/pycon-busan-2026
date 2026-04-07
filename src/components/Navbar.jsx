@@ -15,7 +15,7 @@ function Navbar() {
       <div className="navbar-container">
 
         <Link to="/" className="navbar-logo">
-          {t("PyCon Busan 2026")}
+          {t("logo")}
         </Link>
 
         <ul className="navbar-menu">
@@ -32,8 +32,8 @@ function Navbar() {
 
             {openMenu === "about" && (
               <ul className="dropdown-menu">
-                <li><Link to="/pyconbusan" className="dropdown-link">PyCon Busan 2026</Link></li>
-                <li><Link to="/safety" className="dropdown-link">Health and Safety</Link></li>
+                <li><Link to="/pyconbusan" className="dropdown-link">{t("pycon")}</Link></li>
+                <li><Link to="/safety" className="dropdown-link">{t("health")}</Link></li>
                 <li>
                   <a
                     href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html"
@@ -41,11 +41,11 @@ function Navbar() {
                     rel="noopener noreferrer"
                     className="dropdown-link"
                   >
-                    Code of Conduct
+                    {t("conduct")}
                   </a>
                 </li>
-                <li><Link to="/volunteer" className="dropdown-link">Volunteer</Link></li>
-                <li><Link to="/team" className="dropdown-link">Organizing Team</Link></li>
+                <li><Link to="/volunteer" className="dropdown-link">{t("volunteer")}</Link></li>
+                <li><Link to="/team" className="dropdown-link">{t("team")}</Link></li>
               </ul>
             )}
           </li>

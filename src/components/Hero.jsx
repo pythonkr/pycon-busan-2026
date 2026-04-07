@@ -2,8 +2,11 @@ import './Hero.css';
 import logo from "../images/pycon-logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { SiNaver } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="hero">
       <div className="hero-overlay">
@@ -14,16 +17,16 @@ function Hero() {
           <h1 className="hero-title">PyCon Busan 2026</h1>
 
           <p className="hero-subtitle">
-            The Python Wave in Busan
+            {t("heroSubtitle")}
           </p>
 
           <div className="hero-info">
             <div className="info-box">
-              📅 May 9, 2026 (Sat) 10:00 ~ 18:30
+              📅 {t("heroDate")}
             </div>
 
             <div className="info-box">
-              📍 Busan Centum Venture Town
+              📍 {t("heroLocation")}
             </div>
           </div>
 
@@ -35,7 +38,7 @@ function Hero() {
               className="naver-btn map-button"
             >
               <SiNaver className="map-icon" />
-              Naver Map
+              {t("naverMap")}
             </a>
 
             <a
@@ -45,7 +48,7 @@ function Hero() {
               className="google-btn map-button"
             >
               <FaMapMarkerAlt className="map-icon" />
-              Google Map
+              {t("googleMap")}
             </a>
           </div>
 
