@@ -1,7 +1,6 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-
 import Home from './pages/Home';
 import Timetable from './pages/Timetable';
 import Team from './pages/Team';
@@ -17,10 +16,9 @@ import Session from './pages/Session';
 import Prospectus from './pages/Prospectus';
 import Patrons from './pages/Patrons';
 import Tickets from './pages/Tickets';
-import Tutorial from './pages/Tutorial';
-import Finance from './pages/Finance';
 import Footer from './components/Footer';
-import "./i18n";
+import { useTranslation } from "react-i18next";
+
 
 
 import './App.css';
@@ -48,8 +46,6 @@ function App() {
             <Route path="/prospectus" element={<Prospectus />} />
             <Route path="/patrons" element={<Patrons />} />
             <Route path="/tickets" element={<Tickets />} />
-            <Route path="/tutorial" element={<Tutorial />} />
-            <Route path="/finance" element={<Finance />} />
           </Routes>
         </main>
 
