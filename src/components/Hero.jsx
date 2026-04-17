@@ -5,27 +5,30 @@ import { SiNaver } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 function Hero() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+
   return (
     <section className="hero">
       <div className="hero-overlay">
         <div className="hero-content hero-card">
+
           <div className="hero-logo">
             <img src={logo} alt="python logo" />
           </div>
+
           <h1 className="hero-title">{t("pycon")}</h1>
 
           <p className="hero-subtitle">
-            {t("heroTitle")}
+            {t("heroSubtitle")}
           </p>
 
           <div className="hero-info">
             <div className="info-box">
-              {t("heroDate")}
+              📅 {t("heroDate")}
             </div>
 
             <div className="info-box">
-              {t("heroLocation")}
+              📍 {t("heroLocation")}
             </div>
           </div>
 

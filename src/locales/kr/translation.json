@@ -1,5 +1,4 @@
 {
-  
   "logo": "파이콘 부산 2026",
   "about": "소개",
   "program": "프로그램",
@@ -8,7 +7,8 @@
   "language": "언어",
   "pycon": "파이콘 부산 2026",
   "health": "건강 및 안전",
-  "codeOfConduct": "행동 강령",
+
+  "codeOfConduct": "파이콘 한국 행동 강령",
   "volunteer": "자원봉사",
   "team": "운영팀",
   "timetable": "시간표",
@@ -22,7 +22,8 @@
   "patrons": "후원사",
 
   "PyConBusan": "파이썬 부산",
-  "location": "부산, 대한민국", 
+
+  "location": "부산, 대한민국",
   "representative": "대표자",
   "phone": "전화번호",
   "businessNumber": "사업자등록번호",
@@ -30,16 +31,18 @@
   "hosting": "호스팅 제공자",
   "contact": "문의",
   "aws": "아마존 웹 서비스 코리아(AWS Korea LLC)",
-  "button": "사업자 정보 확인",
+
   "checkBusiness": "사업자 정보 확인",
-  "codeOfConduct": "파이콘 한국 행동 강령",
-  "terms": "이용약관",
-  "privacy": "개인정보 처리방침",
+
+  "termsOfService": "이용약관",
+  "privacyPolicy": "개인정보처리방침",
+
   "copyright": "© 2026, 파이썬 부산. 모든 권리 보유.",
 
-  "heroTitle": "파이썬의 물결, 부산",
-  "heroDate": "📅 2026년 5월 9일 (토) 10:00 ~ 18:30",
-  "heroLocation": "📍 부산 센텀 벤처타운",
+  "heroSubtitle": "부산의 파이썬 물결",
+  "heroDate": "2026년 5월 9일 (토) 10:00 ~ 18:30",
+  "heroLocation": "부산 센텀벤처타운",
+
   "naverMap": "네이버 지도",
   "googleMap": "구글 지도"
 }

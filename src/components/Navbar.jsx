@@ -42,7 +42,7 @@ function Navbar() {
           </div>
         )}
         <Link to="/" className="navbar-logo">
-          {t("pycon")}
+          {t("logo")}
         </Link>
         <div className="navbar-right">
 
@@ -79,25 +79,25 @@ function Navbar() {
                 {t("about")}
               </Link>
 
-              {openMenu === "about" && (
-                <ul className="dropdown-menu">
-                  <li><Link to="/pyconbusan" className="dropdown-link">{t("pycon")}</Link></li>
-                  <li><Link to="/safety" className="dropdown-link">{t("health")}</Link></li>
-                  <li>
-                    <a
-                      href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="dropdown-link"
-                    >
-                      {t("codeOfConduct")}
-                    </a>
-                  </li>
-                  <li><Link to="/volunteer" className="dropdown-link">{t("volunteer")}</Link></li>
-                  <li><Link to="/team" className="dropdown-link">{t("team")}</Link></li>
-                </ul>
-              )}
-            </li>
+            {openMenu === "about" && (
+              <ul className="dropdown-menu">
+                <li><Link to="/pyconbusan" className="dropdown-link">{t("pycon")}</Link></li>
+                <li><Link to="/safety" className="dropdown-link">{t("health")}</Link></li>
+                <li>
+                  <a
+                    href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="dropdown-link"
+                  >
+                    {t("codeOfConduct")}
+                  </a>
+                </li>
+                <li><Link to="/volunteer" className="dropdown-link">{t("volunteer")}</Link></li>
+                <li><Link to="/team" className="dropdown-link">{t("team")}</Link></li>
+              </ul>
+            )}
+          </li>
 
             {/* PROGRAM */}
             <li
