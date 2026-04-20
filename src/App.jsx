@@ -17,6 +17,7 @@ import Prospectus from './pages/Prospectus';
 import Patrons from './pages/Patrons';
 import Tickets from './pages/Tickets';
 import Footer from './components/Footer';
+import Goods from './pages/Goods';
 import { useTranslation } from "react-i18next";
 
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/keynotes" element={<Keynotes />} />
             <Route path="/session" element={<Session />} />
+            <Route path="/goods" element={<Goods />} />
             <Route path="/prospectus" element={<Prospectus />} />
             <Route path="/patrons" element={<Patrons />} />
             <Route path="/tickets" element={<Tickets />} />

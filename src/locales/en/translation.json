@@ -45,5 +45,30 @@
   "heroLocation": "Busan Centum Venture Town",
 
   "naverMap": "Naver Map",
-  "googleMap": "Google Map"
+  "googleMap": "Google Map",
+  "goods": "Goods",
+  "goodsIntro": "Explore our collection of unique and practical items. These goods make perfect gifts for yourself or others, combining style, comfort, and sustainability.",
+
+  "goodsItems": {
+    "toy": {
+      "name": "Toy",
+      "description": "A cute collectible doll."
+    },
+    "ecobag": {
+      "name": "Eco Bag",
+      "description": "Reusable and eco-friendly bag."
+    },
+    "mug": {
+      "name": "Mug",
+      "description": "Perfect for your favorite drinks."
+    },
+    "shirt": {
+      "name": "Shirt",
+      "description": "Comfortable everyday wear."
+    },
+    "socks": {
+      "name": "Socks",
+      "description": "Soft and cozy socks."
+    }
+  }
 }

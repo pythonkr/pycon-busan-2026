@@ -315,6 +315,46 @@
 
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+.goods-container {
+  max-width: 1100px;   /* wider than about page */
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+.goods-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.goods-item:hover {
+  transform: translateY(-5px);
+}
+.goods-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.goods-text {
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.goods-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 /* Responsive heading */
 @media (max-width: 768px) {

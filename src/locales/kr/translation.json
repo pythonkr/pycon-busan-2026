@@ -44,5 +44,31 @@
   "heroLocation": "부산 센텀벤처타운",
 
   "naverMap": "네이버 지도",
-  "googleMap": "구글 지도"
+  "googleMap": "구글 지도",
+
+  "goods":"굿즈",
+  "goodsIntro": "실용적이고 독특한 상품들을 만나보세요. 자신이나 다른 사람을 위한 완벽한 선물이 될 수 있습니다.",
+
+  "goodsItems": {
+    "toy": {
+      "name": "인형",
+      "description": "귀여운 수집용 인형입니다."
+    },
+    "ecobag": {
+      "name": "에코백",
+      "description": "재사용 가능한 친환경 가방입니다."
+    },
+    "mug": {
+      "name": "머그컵",
+      "description": "좋아하는 음료를 위한 완벽한 컵입니다."
+    },
+    "shirt": {
+      "name": "셔츠",
+      "description": "편안한 일상복입니다."
+    },
+    "socks": {
+      "name": "양말",
+      "description": "부드럽고 따뜻한 양말입니다."
+    }
+  }
 }
