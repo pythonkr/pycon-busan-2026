@@ -1,10 +1,11 @@
-.navbar { 
-  background-color: #2f8f92; 
-  padding: 1rem 0; 
-  position: sticky; 
-  top: 0; 
-  z-index: 1000; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+.navbar {
+  background: linear-gradient(135deg, #c45c7a 0%, #a8456a 100%);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(168, 69, 106, 0.3);
+}
 
 .navbar-container {
   max-width: 1200px;
@@ -53,8 +54,8 @@
 }
 
 .navbar-link:hover {
-  color: #4a9eff;
-  background-color: rgba(74, 158, 255, 0.1);
+  color: #ffd8e4;
+  background-color: rgba(255, 200, 220, 0.15);
 }
 
 /* Mobile responsive */
@@ -108,7 +109,7 @@
   width: 300px;
 
   /* GLASS EFFECT */
-  background: rgba(124, 150, 151, 0.75);
+  background: rgba(180, 80, 110, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
@@ -248,13 +249,13 @@
 
 /* active language */
 .lang-option.active {
-  background: #4a9eff;
-  color: white;
+  background: white;
+  color: #a8456a;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(74,158,255,0.4);
+  box-shadow: 0 2px 8px rgba(168, 69, 106, 0.25);
 }
 
 /* hover */
 .lang-option:hover {
-  color: #4a9eff;
+  color: #ffd8e4;
 }

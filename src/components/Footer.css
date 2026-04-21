@@ -1,5 +1,5 @@
 .footer {
-  background: #2f8f92;
+  background: linear-gradient(135deg, #9e3d5c 0%, #7a2d48 100%);
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -35,7 +35,7 @@
 
 .footer-btn:hover {
   background: white;
-  color: #2f8f92;
+  color: #9e3d5c;
 }
 
 .footer-links {

@@ -2,29 +2,34 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
-import i18n from "../i18n"; // adjust path
+
+const SPONSOR_ENABLED = false;
+
+const CODE_OF_CONDUCT_URL =
+  "https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html";
+const TICKETS_URL = "https://event-us.kr/pythonkorea/event/122855";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const { t, i18n } = useTranslation();
-  const closeDropdown = () => setOpenMenu(null);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [mobileSubmenu, setMobileSubmenu] = useState(null);
-  const handleLinkClick = () => {
-    setMenuOpen(false);   // close mobile menu
-    setOpenMenu(null);    // close dropdown
-  };
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
 
+  const { t, i18n } = useTranslation();
+
+  const closeDropdown = () => setOpenMenu(null);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    setOpenMenu(null);
+  };
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
     if (!isMobile) {
       setMobileSubmenu(null);
@@ -35,18 +40,17 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* MENU BUTTON */}
         {isMobile && (
           <div className="menu-toggle" onClick={toggleMenu}>
             ☰
           </div>
         )}
+
         <Link to="/" className="navbar-logo">
           {t("logo")}
         </Link>
-        <div className="navbar-right">
 
-          {/* LANGUAGE (mobile only visible via CSS) */}
+        <div className="navbar-right">
           <div className="lang-switch">
             <div
               className={`lang-option ${i18n.language === "kr" ? "active" : ""}`}
@@ -54,7 +58,6 @@ function Navbar() {
             >
               KR
             </div>
-
             <div
               className={`lang-option ${i18n.language === "en" ? "active" : ""}`}
               onClick={() => i18n.changeLanguage("en")}
@@ -62,14 +65,13 @@ function Navbar() {
               EN
             </div>
           </div>
-
-
-
         </div>
+
+        {/* Desktop menu */}
         {!isMobile && (
           <ul className="navbar-menu">
 
-            {/* ABOUT */}
+            {/* 소개 */}
             <li
               className="dropdown"
               onMouseEnter={() => setOpenMenu("about")}
@@ -78,74 +80,35 @@ function Navbar() {
               <Link to="/pyconbusan" className="navbar-link">
                 {t("about")}
               </Link>
-
               {openMenu === "about" && (
                 <ul className="dropdown-menu">
                   <li><Link to="/pyconbusan" className="dropdown-link">{t("pycon")}</Link></li>
-                  <li><Link to="/safety" className="dropdown-link">{t("health")}</Link></li>
-                  <li>
-                    <a
-                      href="https://pythonkr.github.io/pycon-code-of-conduct/ko/coc/a_intent_and_purpose.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="dropdown-link"
-                    >
-                      {t("codeOfConduct")}
-                    </a>
-                  </li>
-                  <li><Link to="/volunteer" className="dropdown-link">{t("volunteer")}</Link></li>
-                  <li><Link to="/team" className="dropdown-link">{t("team")}</Link></li>
+                  <li><Link to="/team" className="dropdown-link">{t("committee")}</Link></li>
                 </ul>
               )}
             </li>
 
-            {/* PROGRAM */}
-            <li
-              className="dropdown"
-              onMouseEnter={() => setOpenMenu("program")}
-              onMouseLeave={closeDropdown}
-            >
-              <Link to="/timetable" className="navbar-link">
-                {t("program")}
-              </Link>
-
-              {openMenu === "program" && (
-                <ul className="dropdown-menu">
-                  <li><Link to="/timetable" className="dropdown-link">{t("timetable")}</Link></li>
-                  <li><Link to="/sprint" className="dropdown-link">{t("sprint")}</Link></li>
-                  <li><Link to="/lighttalk" className="dropdown-link">{t("lightning")}</Link></li>
-                </ul>
-              )}
-            </li>
-
-            {/* SESSION */}
+            {/* 세션 */}
             <li
               className="dropdown"
               onMouseEnter={() => setOpenMenu("session")}
               onMouseLeave={closeDropdown}
             >
-              <Link to="/session" className="navbar-link">
+              <Link to="/timetable" className="navbar-link">
                 {t("session")}
               </Link>
-
               {openMenu === "session" && (
                 <ul className="dropdown-menu">
-                  <li><Link to="/schedule" className="dropdown-link">{t("schedule")}</Link></li>
-                  <li><Link to="/keynotes" className="dropdown-link">{t("keynotes")}</Link></li>
-                  <li><Link to="/session" className="dropdown-link">{t("session")}</Link></li>
+                  <li><Link to="/timetable" className="dropdown-link">{t("timetable")}</Link></li>
+                  <li><Link to="/session" className="dropdown-link">{t("sessionList")}</Link></li>
                 </ul>
               )}
             </li>
-            {/* GOODS */}
-            <li className="dropdown">
-              <Link to="/goods" className="navbar-link">
-                {t("goods")}
-              </Link>
-            </li>
-            {/* TICKETS */}
-            <li className="dropdown">
+
+            {/* 티켓 */}
+            <li>
               <a
-                href="https://event-us.kr/pythonkorea/event/122855"
+                href={TICKETS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="navbar-link"
@@ -154,25 +117,38 @@ function Navbar() {
               </a>
             </li>
 
-            {/* SPONSOR */}
-            <li
-              className="dropdown"
-              onMouseEnter={() => setOpenMenu("sponsor")}
-              onMouseLeave={closeDropdown}
-            >
-              <Link to="/prospectus" className="navbar-link">
-                {t("sponsor")}
-              </Link>
-
-              {openMenu === "sponsor" && (
-                <ul className="dropdown-menu">
-                  <li><Link to="/prospectus" className="dropdown-link">{t("prospectus")}</Link></li>
-                  <li><Link to="/patrons" className="dropdown-link">{t("patrons")}</Link></li>
-                </ul>
-              )}
+            {/* 행동 강령 */}
+            <li>
+              <a
+                href={CODE_OF_CONDUCT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="navbar-link"
+              >
+                {t("conduct")}
+              </a>
             </li>
 
-            {/* LANGUAGE SWITCH */}
+            {/* 후원사 – 확정 후 SPONSOR_ENABLED = true 로 변경 */}
+            {SPONSOR_ENABLED && (
+              <li
+                className="dropdown"
+                onMouseEnter={() => setOpenMenu("sponsor")}
+                onMouseLeave={closeDropdown}
+              >
+                <Link to="/patrons" className="navbar-link">
+                  {t("sponsor")}
+                </Link>
+                {openMenu === "sponsor" && (
+                  <ul className="dropdown-menu">
+                    <li><Link to="/patrons" className="dropdown-link">{t("sponsorInfo")}</Link></li>
+                    <li><Link to="/prospectus" className="dropdown-link">{t("sponsorRecruit")}</Link></li>
+                  </ul>
+                )}
+              </li>
+            )}
+
+            {/* 언어 전환 */}
             <li>
               <div className="lang-switch">
                 <div
@@ -181,7 +157,6 @@ function Navbar() {
                 >
                   KR
                 </div>
-
                 <div
                   className={`lang-option ${i18n.language === "en" ? "active" : ""}`}
                   onClick={() => i18n.changeLanguage("en")}
@@ -193,34 +168,35 @@ function Navbar() {
 
           </ul>
         )}
+
+        {/* Mobile sidebar */}
         {isMobile && (
           <ul className={`navbar-menu ${menuOpen ? "active" : ""}`}>
 
-            {/* SIDEBAR HEADER */}
             <div className="sidebar-header">
-              <div className="menu-toggle" onClick={toggleMenu}>
-                ☰
-              </div>
+              <div className="menu-toggle" onClick={toggleMenu}>☰</div>
               <Link to="/" className="sidebar-logo" onClick={handleLinkClick}>
                 {t("pycon")}
               </Link>
             </div>
 
-            {/* BACK BUTTON */}
             {mobileSubmenu && (
               <li className="back-btn" onClick={() => setMobileSubmenu(null)}>
                 ←
               </li>
             )}
 
-            {/* MAIN MENU */}
             {!mobileSubmenu && (
               <>
-                <li onClick={() => setMobileSubmenu("about")} className="navbar-link">{t("about")}</li>
-                <li onClick={() => setMobileSubmenu("program")} className="navbar-link">{t("program")}</li>
+                <li onClick={() => setMobileSubmenu("about")} className="navbar-link">
+                  {t("about")}
+                </li>
+                <li onClick={() => setMobileSubmenu("session")} className="navbar-link">
+                  {t("session")}
+                </li>
                 <li>
                   <a
-                    href="https://event-us.kr/pythonkorea/event/122855"
+                    href={TICKETS_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="navbar-link"
@@ -228,46 +204,44 @@ function Navbar() {
                     {t("tickets")}
                   </a>
                 </li>
-                <li onClick={() => setMobileSubmenu("session")} className="navbar-link">{t("session")}</li>
                 <li>
-                  <Link to="/goods" className="navbar-link" onClick={handleLinkClick}>
-                    {t("goods")}
-                  </Link>
+                  <a
+                    href={CODE_OF_CONDUCT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="navbar-link"
+                  >
+                    {t("conduct")}
+                  </a>
                 </li>
-                <li onClick={() => setMobileSubmenu("sponsor")} className="navbar-link">{t("sponsor")}</li>
+                {/* 후원사 – 확정 후 SPONSOR_ENABLED = true 로 변경 */}
+                {SPONSOR_ENABLED && (
+                  <li onClick={() => setMobileSubmenu("sponsor")} className="navbar-link">
+                    {t("sponsor")}
+                  </li>
+                )}
               </>
             )}
 
-            {/* SUBMENUS */}
             {mobileSubmenu === "about" && (
               <>
                 <li><Link to="/pyconbusan" className="navbar-link" onClick={handleLinkClick}>{t("pycon")}</Link></li>
-                <li><Link to="/safety" className="navbar-link" onClick={handleLinkClick}>{t("health")}</Link></li>
-                <li><Link to="/volunteer" className="navbar-link" onClick={handleLinkClick}>{t("volunteer")}</Link></li>
-                <li><Link to="/team" className="navbar-link" onClick={handleLinkClick}>{t("team")}</Link></li>
-              </>
-            )}
-
-            {mobileSubmenu === "program" && (
-              <>
-                <li><Link to="/timetable" className="navbar-link" onClick={handleLinkClick}>{t("timetable")}</Link></li>
-                <li><Link to="/sprint" className="navbar-link" onClick={handleLinkClick}>{t("sprint")}</Link></li>
-                <li><Link to="/lighttalk" className="navbar-link" onClick={handleLinkClick}>{t("lightning")}</Link></li>
+                <li><Link to="/team" className="navbar-link" onClick={handleLinkClick}>{t("committee")}</Link></li>
               </>
             )}
 
             {mobileSubmenu === "session" && (
               <>
-                <li><Link to="/schedule" className="navbar-link" onClick={handleLinkClick}>{t("schedule")}</Link></li>
-                <li><Link to="/keynotes" className="navbar-link" onClick={handleLinkClick}>{t("keynotes")}</Link></li>
-                <li><Link to="/session" className="navbar-link" onClick={handleLinkClick}>{t("session")}</Link></li>
+                <li><Link to="/timetable" className="navbar-link" onClick={handleLinkClick}>{t("timetable")}</Link></li>
+                <li><Link to="/session" className="navbar-link" onClick={handleLinkClick}>{t("sessionList")}</Link></li>
               </>
             )}
 
-            {mobileSubmenu === "sponsor" && (
+            {/* 후원사 – 확정 후 SPONSOR_ENABLED = true 로 변경 */}
+            {SPONSOR_ENABLED && mobileSubmenu === "sponsor" && (
               <>
-                <li><Link to="/prospectus" className="navbar-link" onClick={handleLinkClick}>{t("prospectus")}</Link></li>
-                <li><Link to="/patrons" className="navbar-link" onClick={handleLinkClick}>{t("patrons")}</Link></li>
+                <li><Link to="/patrons" className="navbar-link" onClick={handleLinkClick}>{t("sponsorInfo")}</Link></li>
+                <li><Link to="/prospectus" className="navbar-link" onClick={handleLinkClick}>{t("sponsorRecruit")}</Link></li>
               </>
             )}
 

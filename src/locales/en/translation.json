@@ -6,6 +6,11 @@
   "financialAid": "Financial Aid",
   "store": "Store",
   "sponsor": "Sponsor",
+  "conduct": "Code of Conduct",
+  "committee": "Organizing Committee",
+  "committeeRole": "Organizing Committee",
+  "sponsorInfo": "Sponsors",
+  "sponsorRecruit": "Become a Sponsor",
   "language": "Language",
   "pycon": "PyCon Busan 2026",
 
@@ -41,8 +46,13 @@
   "copyright": "© 2026, Python Busan. All rights reserved.",
 
   "heroSubtitle": "The Python Wave in Busan",
-  "heroDate": "May 9, 2026 (Sat) 10:00 ~ 18:30",
+  "heroDate": "May 9, 2026 (Sat) 10:00 – 18:30",
   "heroLocation": "Busan Centum Venture Town",
+  "heroLocationSub": "Centum, Busan",
+  "dateLabel": "Date",
+  "locationLabel": "Venue",
+  "sessionList": "Session List",
+  "buyTickets": "Buy Tickets",
 
   "naverMap": "Naver Map",
   "googleMap": "Google Map",
@@ -50,25 +60,30 @@
   "goodsIntro": "Explore our collection of unique and practical items. These goods make perfect gifts for yourself or others, combining style, comfort, and sustainability.",
 
   "goodsItems": {
-    "toy": {
-      "name": "Toy",
-      "description": "A cute collectible doll."
-    },
-    "ecobag": {
-      "name": "Eco Bag",
-      "description": "Reusable and eco-friendly bag."
-    },
-    "mug": {
-      "name": "Mug",
-      "description": "Perfect for your favorite drinks."
-    },
-    "shirt": {
-      "name": "Shirt",
-      "description": "Comfortable everyday wear."
-    },
-    "socks": {
-      "name": "Socks",
-      "description": "Soft and cozy socks."
-    }
-  }
+    "toy": { "name": "Toy", "description": "A cute collectible doll." },
+    "ecobag": { "name": "Eco Bag", "description": "Reusable and eco-friendly bag." },
+    "mug": { "name": "Mug", "description": "Perfect for your favorite drinks." },
+    "shirt": { "name": "Shirt", "description": "Comfortable everyday wear." },
+    "socks": { "name": "Socks", "description": "Soft and cozy socks." }
+  },
+
+  "pyconBusanHeading": "About PyCon Busan",
+  "pyconBusanIntro": "Python's first festival comes to Busan! PyCon is a non-profit conference organized by Python programming language communities around the world. It is a community-driven tech conference where Python users come together to share knowledge and network. Speakers, attendees, and volunteers gather purely to vitalize the Python ecosystem with no monetary compensation.",
+  "eventInfoTitle": "Event Info",
+  "eventScheduleLabel": "Date",
+  "eventScheduleDate": "May 9, 2026 (Sat) 09:00 – 19:00",
+  "eventVenueLabel": "Venue",
+  "eventVenueDetail": "Busan Digital Innovation Academy, 41 Centum-dong-ro, Haeundae-gu, Busan",
+  "eventVenueFloor": "6F, 7F",
+  "eventRegistrationLabel": "Registration",
+  "eventRegistrationDate": "Apr 2, 2026 (Thu) 12:00 – May 8, 2026 (Fri) 23:30",
+  "openKakaoMap": "Open in KakaoMap",
+  "openNaverMap": "Open in Naver Map",
+  "openGoogleMap": "Open in Google Maps",
+
+  "teamPageHeading": "Organizing Committee",
+  "teamPageDesc": "Meet the committee organizing PyCon Busan 2026.",
+
+  "timetableHeading": "Timetable",
+  "timetableDesc": "May 9, 2026 (Sat) · Busan Centum Venture Town"
 }

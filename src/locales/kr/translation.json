@@ -3,7 +3,12 @@
   "about": "소개",
   "program": "프로그램",
   "session": "세션",
-  "sponsor": "후원",
+  "sponsor": "후원사",
+  "conduct": "행동 강령",
+  "committee": "준비위원회",
+  "committeeRole": "준비위원회",
+  "sponsorInfo": "후원사 소개",
+  "sponsorRecruit": "후원사 모집",
   "language": "언어",
   "pycon": "파이콘 부산 2026",
   "health": "건강 및 안전",
@@ -39,36 +44,46 @@
 
   "copyright": "© 2026, 파이썬 부산. 모든 권리 보유.",
 
-  "heroSubtitle": "부산의 파이썬 물결",
-  "heroDate": "2026년 5월 9일 (토) 10:00 ~ 18:30",
+  "heroSubtitle": "부산에서 만나는 파이썬의 물결",
+  "heroDate": "2026년 5월 9일 (토) 10:00 – 18:30",
   "heroLocation": "부산 센텀벤처타운",
+  "heroLocationSub": "Centum, Busan",
+  "dateLabel": "일시",
+  "locationLabel": "장소",
+  "sessionList": "발표 목록",
+  "buyTickets": "티켓 구매",
 
   "naverMap": "네이버 지도",
   "googleMap": "구글 지도",
 
-  "goods":"굿즈",
+  "goods": "굿즈",
   "goodsIntro": "실용적이고 독특한 상품들을 만나보세요. 자신이나 다른 사람을 위한 완벽한 선물이 될 수 있습니다.",
 
   "goodsItems": {
-    "toy": {
-      "name": "인형",
-      "description": "귀여운 수집용 인형입니다."
-    },
-    "ecobag": {
-      "name": "에코백",
-      "description": "재사용 가능한 친환경 가방입니다."
-    },
-    "mug": {
-      "name": "머그컵",
-      "description": "좋아하는 음료를 위한 완벽한 컵입니다."
-    },
-    "shirt": {
-      "name": "셔츠",
-      "description": "편안한 일상복입니다."
-    },
-    "socks": {
-      "name": "양말",
-      "description": "부드럽고 따뜻한 양말입니다."
-    }
-  }
+    "toy": { "name": "인형", "description": "귀여운 수집용 인형입니다." },
+    "ecobag": { "name": "에코백", "description": "재사용 가능한 친환경 가방입니다." },
+    "mug": { "name": "머그컵", "description": "좋아하는 음료를 위한 완벽한 컵입니다." },
+    "shirt": { "name": "셔츠", "description": "편안한 일상복입니다." },
+    "socks": { "name": "양말", "description": "부드럽고 따뜻한 양말입니다." }
+  },
+
+  "pyconBusanHeading": "파이콘 부산이란",
+  "pyconBusanIntro": "부산에 처음으로 파이썬 축제가 열립니다! 파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스입니다. 파이썬 프로그래밍 언어를 사용하는 사용자들이 함께 지식을 공유하고 네트워킹하는 커뮤니티 중심의 기술 컨퍼런스입니다. 발표자, 참가자, 자원봉사자 모두가 금전적 보상 없이 순수하게 파이썬 생태계 활성화를 위해 모이는 행사입니다.",
+  "eventInfoTitle": "행사 정보",
+  "eventScheduleLabel": "일정",
+  "eventScheduleDate": "2026년 5월 9일 (토) 09:00 ~ 19:00",
+  "eventVenueLabel": "장소",
+  "eventVenueDetail": "부산 해운대구 센텀동로 41 부산디지털혁신아카데미",
+  "eventVenueFloor": "6층, 7층",
+  "eventRegistrationLabel": "등록",
+  "eventRegistrationDate": "2026년 4월 2일 (목) 12:00 ~ 5월 8일 (금) 23:30",
+  "openKakaoMap": "카카오맵에서 열기",
+  "openNaverMap": "네이버 지도에서 열기",
+  "openGoogleMap": "구글 지도에서 열기",
+
+  "teamPageHeading": "준비위원회",
+  "teamPageDesc": "PyCon Busan 2026을 준비하는 조직 위원회입니다.",
+
+  "timetableHeading": "시간표",
+  "timetableDesc": "2026년 5월 9일 (토) · 부산 센텀벤처타운"
 }

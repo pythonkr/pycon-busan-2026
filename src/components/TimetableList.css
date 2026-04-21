@@ -1,14 +1,129 @@
-.timetable-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 1000px;
-  margin: 0 auto;
+.tt-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Tablet and desktop: Grid layout option */
-@media (min-width: 1024px) {
-  .timetable-list {
-    gap: 1.5rem;
+.tt-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.92rem;
+}
+
+/* Header */
+.tt-th {
+  background: #f0f0f5;
+  color: #444;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  text-align: center;
+  border: 1px solid #e0e0e8;
+  white-space: nowrap;
+}
+
+.tt-th-time {
+  width: 90px;
+}
+
+/* Cells */
+.tt-td {
+  border: 1px solid #e8e8ee;
+  padding: 0.7rem 0.9rem;
+  vertical-align: top;
+}
+
+.tt-time {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #555;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background: #fafafa;
+  min-width: 70px;
+}
+
+.tt-time-break {
+  color: #aaa;
+  font-size: 0.82rem;
+}
+
+/* Full-hall rows */
+.tt-row-full.keynote .tt-cell-full {
+  background: #ede9fe;
+}
+
+.tt-row-full.lightning .tt-cell-full {
+  background: #fef9c3;
+}
+
+.tt-cell-full {
+  background: #f0f4ff;
+}
+
+/* Parallel session cells */
+.tt-cell-session {
+  background: #fff;
+  transition: background 0.15s;
+}
+
+.tt-cell-session:hover {
+  background: #f5f7ff;
+}
+
+.tt-cell-empty {
+  background: #fafafa;
+}
+
+/* Break rows */
+.tt-row-break .tt-cell-break {
+  background: #fafafa;
+  padding: 0.35rem 0.9rem;
+}
+
+.tt-break-label {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Session content */
+.tt-session {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tt-session-title {
+  font-weight: 600;
+  color: #1e1b4b;
+  line-height: 1.4;
+}
+
+.tt-session-speaker {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+.tt-session-speaker::before {
+  content: '👤 ';
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tt-table {
+    font-size: 0.85rem;
+  }
+
+  .tt-th,
+  .tt-td {
+    padding: 0.55rem 0.65rem;
+  }
+
+  .tt-time {
+    font-size: 0.8rem;
+    min-width: 54px;
   }
 }

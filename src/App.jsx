@@ -18,10 +18,7 @@ import Patrons from './pages/Patrons';
 import Tickets from './pages/Tickets';
 import Footer from './components/Footer';
 import Goods from './pages/Goods';
-import { useTranslation } from "react-i18next";
-
-
-
+import './i18n';
 import './App.css';
 
 function App() {

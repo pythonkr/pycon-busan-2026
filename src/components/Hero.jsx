@@ -3,32 +3,57 @@ import logo from "../images/pycon-logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { SiNaver } from "react-icons/si";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const { t } = useTranslation();
 
   return (
     <section className="hero">
-      <div className="hero-overlay">
-        <div className="hero-content hero-card">
-
+      <div className="hero-center">
+        <div className="hero-card">
           <div className="hero-logo">
-            <img src={logo} alt="python logo" />
+            <img src={logo} alt="PyCon Busan logo" />
           </div>
 
-          <h1 className="hero-title">{t("pycon")}</h1>
+          <h1 className="hero-title">
+            PyCon <span className="hero-title-accent">Busan</span>
+            <br />2026
+          </h1>
 
-          <p className="hero-subtitle">
-            {t("heroSubtitle")}
-          </p>
+          <p className="hero-subtitle">{t("heroSubtitle")}</p>
 
-          <div className="hero-info">
-            <div className="info-box">
-              📅 {t("heroDate")}
+          <div className="hero-divider" />
+
+          <div className="hero-cta-buttons">
+            <Link to="/session" className="hero-btn hero-btn-primary">
+              {t("sessionList")} →
+            </Link>
+            <a
+              href="https://event-us.kr/pythonkorea/event/122855"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-btn hero-btn-secondary"
+            >
+              {t("buyTickets")} →
+            </a>
+          </div>
+
+          <div className="hero-info-boxes">
+            <div className="hero-info-box">
+              <span className="info-icon">🗓</span>
+              <div className="info-box-text">
+                <span className="info-label">{t("dateLabel")}</span>
+                <span className="info-value">{t("heroDate")}</span>
+              </div>
             </div>
-
-            <div className="info-box">
-              📍 {t("heroLocation")}
+            <div className="hero-info-box">
+              <span className="info-icon">📍</span>
+              <div className="info-box-text">
+                <span className="info-label">{t("locationLabel")}</span>
+                <span className="info-value">{t("heroLocation")}</span>
+                <span className="info-sub">{t("heroLocationSub")}</span>
+              </div>
             </div>
           </div>
 
@@ -37,19 +62,18 @@ function Hero() {
               href="https://naver.me/59UjHr3h"
               target="_blank"
               rel="noopener noreferrer"
-              className="naver-btn map-button"
+              className="map-btn naver-map-btn"
             >
-              <SiNaver className="map-icon" />
+              <SiNaver className="map-btn-icon" />
               {t("naverMap")}
             </a>
-
             <a
               href="https://maps.app.goo.gl/8wiKDJtZwAts659B6"
               target="_blank"
               rel="noopener noreferrer"
-              className="google-btn map-button"
+              className="map-btn google-map-btn"
             >
-              <FaMapMarkerAlt className="map-icon" />
+              <FaMapMarkerAlt className="map-btn-icon" />
               {t("googleMap")}
             </a>
           </div>
