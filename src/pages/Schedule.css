@@ -1,0 +1,88 @@
+/* Page container */
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Table header */
+.timetable th {
+  background: #1e293b;
+  color: white;
+  padding: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Table cells */
+.timetable td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  vertical-align: top;
+  background: white;
+}
+
+/* Time column */
+.time {
+  font-weight: 600;
+  background: #f8fafc;
+  color: #374151;
+  width: 90px;
+}
+
+/* Session card */
+.session-box {
+  background: #eef2ff;
+  border-left: 4px solid #6366f1;
+  border-radius: 6px;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.session-box:hover {
+  background: #e0e7ff;
+  transform: translateY(-1px);
+}
+
+/* Session title */
+.session-box strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+/* Speaker name */
+.session-box p {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Break rows */
+.break {
+  background: #fef3c7;
+  text-align: center;
+  font-weight: 600;
+  color: #92400e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timetable th,
+  .timetable td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .session-box strong {
+    font-size: 0.8rem;
+  }
+
+  .session-box p {
+    font-size: 0.7rem;
+  }
+}

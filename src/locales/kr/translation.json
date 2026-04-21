@@ -1,0 +1,74 @@
+{
+  "logo": "파이콘 부산 2026",
+  "about": "소개",
+  "program": "프로그램",
+  "session": "세션",
+  "sponsor": "후원",
+  "language": "언어",
+  "pycon": "파이콘 부산 2026",
+  "health": "건강 및 안전",
+
+  "codeOfConduct": "파이콘 한국 행동 강령",
+  "volunteer": "자원봉사",
+  "team": "운영팀",
+  "timetable": "시간표",
+  "sprint": "스프린트",
+  "lightning": "라이트닝 토크",
+  "schedule": "세션 일정",
+  "keynotes": "키노트",
+  "tickets": "티켓",
+  "tutorial": "튜토리얼",
+  "prospectus": "후원 안내",
+  "patrons": "후원사",
+
+  "PyConBusan": "파이썬 부산",
+
+  "location": "부산, 대한민국",
+  "representative": "대표자",
+  "phone": "전화번호",
+  "businessNumber": "사업자등록번호",
+  "mailOrderNumber": "통신판매업 신고번호",
+  "hosting": "호스팅 제공자",
+  "contact": "문의",
+  "aws": "아마존 웹 서비스 코리아(AWS Korea LLC)",
+
+  "checkBusiness": "사업자 정보 확인",
+
+  "termsOfService": "이용약관",
+  "privacyPolicy": "개인정보처리방침",
+
+  "copyright": "© 2026, 파이썬 부산. 모든 권리 보유.",
+
+  "heroSubtitle": "부산의 파이썬 물결",
+  "heroDate": "2026년 5월 9일 (토) 10:00 ~ 18:30",
+  "heroLocation": "부산 센텀벤처타운",
+
+  "naverMap": "네이버 지도",
+  "googleMap": "구글 지도",
+
+  "goods":"굿즈",
+  "goodsIntro": "실용적이고 독특한 상품들을 만나보세요. 자신이나 다른 사람을 위한 완벽한 선물이 될 수 있습니다.",
+
+  "goodsItems": {
+    "toy": {
+      "name": "인형",
+      "description": "귀여운 수집용 인형입니다."
+    },
+    "ecobag": {
+      "name": "에코백",
+      "description": "재사용 가능한 친환경 가방입니다."
+    },
+    "mug": {
+      "name": "머그컵",
+      "description": "좋아하는 음료를 위한 완벽한 컵입니다."
+    },
+    "shirt": {
+      "name": "셔츠",
+      "description": "편안한 일상복입니다."
+    },
+    "socks": {
+      "name": "양말",
+      "description": "부드럽고 따뜻한 양말입니다."
+    }
+  }
+}

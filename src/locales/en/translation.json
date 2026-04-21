@@ -1,0 +1,74 @@
+{
+  "logo": "PyCon Busan 2026",
+  "about": "About",
+  "program": "Program",
+  "session": "Session",
+  "financialAid": "Financial Aid",
+  "store": "Store",
+  "sponsor": "Sponsor",
+  "language": "Language",
+  "pycon": "PyCon Busan 2026",
+
+  "codeOfConduct": "Code of Conduct",
+  "health": "Health and Safety",
+
+  "volunteer": "Volunteer",
+  "team": "Organizing Team",
+  "timetable": "Timetable",
+  "sprint": "Sprint",
+  "lightning": "Lightning Talk",
+  "schedule": "Session Schedule",
+  "keynotes": "Keynotes",
+  "tickets": "Tickets",
+  "tutorial": "Tutorial",
+  "prospectus": "Prospectus",
+  "patrons": "Patrons",
+
+  "location": "Busan, Republic of Korea",
+  "representative": "Representative",
+  "phone": "Phone Number",
+  "businessNumber": "Business Registration Number",
+  "mailOrderNumber": "Mail Order Sales Registration Number",
+  "hosting": "Hosting Provider",
+  "aws": "Amazon Web Services (Korea LLC)",
+  "contact": "Contact",
+
+  "checkBusiness": "Check Business Registration Information",
+
+  "termsOfService": "Terms of Service",
+  "privacyPolicy": "Privacy Policy",
+
+  "copyright": "© 2026, Python Busan. All rights reserved.",
+
+  "heroSubtitle": "The Python Wave in Busan",
+  "heroDate": "May 9, 2026 (Sat) 10:00 ~ 18:30",
+  "heroLocation": "Busan Centum Venture Town",
+
+  "naverMap": "Naver Map",
+  "googleMap": "Google Map",
+  "goods": "Goods",
+  "goodsIntro": "Explore our collection of unique and practical items. These goods make perfect gifts for yourself or others, combining style, comfort, and sustainability.",
+
+  "goodsItems": {
+    "toy": {
+      "name": "Toy",
+      "description": "A cute collectible doll."
+    },
+    "ecobag": {
+      "name": "Eco Bag",
+      "description": "Reusable and eco-friendly bag."
+    },
+    "mug": {
+      "name": "Mug",
+      "description": "Perfect for your favorite drinks."
+    },
+    "shirt": {
+      "name": "Shirt",
+      "description": "Comfortable everyday wear."
+    },
+    "socks": {
+      "name": "Socks",
+      "description": "Soft and cozy socks."
+    }
+  }
+}

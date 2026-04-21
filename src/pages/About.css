@@ -1,0 +1,396 @@
+/* About Page */
+.about-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("../images/pycon-bg.png");
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.about-heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Description */
+.about-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Main text */
+.about-text {
+  font-size: 1.05rem;
+  color: #f0f0f0;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Hero section for location */
+.location-hero {
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(0.85);
+}
+
+/* Map container */
+.map-strip {
+  width: 90%;
+  max-width: 1100px;
+  height: 300px;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  border: 2px solid rgba(255,255,255,0.1);
+}
+
+/* Map iframe */
+.map-strip iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Map buttons */
+.map-buttons {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Button style */
+.map-btn {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.map-btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* event section layout */
+.event-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* event cards */
+.event-item {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+
+  padding: 20px;
+  border-radius: 12px;
+
+  text-align: center;
+  
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* title */
+.event-item strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #ffffff ;
+  margin-bottom: 8px;
+}
+
+/* description text */
+.event-item p {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.about-subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  color: #ffffff !important;   /* force white */
+
+  text-align: center;
+
+  margin: 40px 0 15px 0;
+}
+/* sprint section container */
+.sprint-list {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* sprint card */
+.sprint-item {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  padding: 28px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+  transition: all 0.3s ease;
+  
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* hover animation */
+.sprint-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+}
+
+/* project title */
+.sprint-item h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+
+  color: #ffffff;
+}
+
+/* description */
+.sprint-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+}
+
+
+/* Page */
+
+.tickets-page {
+  padding: 80px 20px;
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("../images/pycon-bg.png");
+
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+
+.tickets-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.tickets-description {
+  opacity: 0.9;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+
+.tickets-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+
+  max-width: 900px;
+  margin: auto;
+
+  gap: 30px;
+}
+
+/* Ticket card */
+
+.ticket-card {
+  background: rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(10px);
+
+  padding: 35px 25px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  transition: 0.3s;
+}
+
+.ticket-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Ticket info */
+
+.ticket-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ticket-price {
+  font-size: 28px;
+  font-weight: bold;
+
+  color: #4a9eff;
+
+  margin-bottom: 10px;
+}
+
+.ticket-desc {
+  opacity: 0.85;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+/* Button */
+
+.ticket-btn {
+  background: white;
+
+  color: #3776ab;
+
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.ticket-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.goods-container {
+  max-width: 1100px;   /* wider than about page */
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+.goods-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.goods-item:hover {
+  transform: translateY(-5px);
+}
+.goods-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.goods-text {
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.goods-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive heading */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 4rem 1rem;
+  }
+  .about-heading {
+    font-size: 2.2rem;
+  }
+  .about-description {
+    font-size: 1rem;
+  }
+  .about-text {
+    font-size: 0.95rem;
+  }
+  .map-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .map-strip {
+    height: 450px;
+  }
+  .tickets-title {
+    font-size: 40px;
+  }
+}
+
+
+/* responsive */
+@media (max-width: 768px) {
+  .sprint-list {
+    grid-template-columns: 1fr;
+  }
+
+  .sprint-item {
+    padding: 24px;
+  }
+}
