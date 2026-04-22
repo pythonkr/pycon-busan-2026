@@ -110,6 +110,7 @@
   font-weight: 600;
   color: #1e1b4b;
   line-height: 1.4;
+  white-space: pre-line;
 }
 
 .tt-session-speaker {
