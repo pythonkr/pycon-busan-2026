@@ -89,20 +89,10 @@ function Navbar() {
             </li>
 
             {/* 세션 */}
-            <li
-              className="dropdown"
-              onMouseEnter={() => setOpenMenu("session")}
-              onMouseLeave={closeDropdown}
-            >
+            <li>
               <Link to="/timetable" className="navbar-link">
                 {t("session")}
               </Link>
-              {openMenu === "session" && (
-                <ul className="dropdown-menu">
-                  <li><Link to="/timetable" className="dropdown-link">{t("timetable")}</Link></li>
-                  <li><Link to="/session" className="dropdown-link">{t("sessionList")}</Link></li>
-                </ul>
-              )}
             </li>
 
             {/* 티켓 */}
@@ -191,8 +181,10 @@ function Navbar() {
                 <li onClick={() => setMobileSubmenu("about")} className="navbar-link">
                   {t("about")}
                 </li>
-                <li onClick={() => setMobileSubmenu("session")} className="navbar-link">
-                  {t("session")}
+                <li>
+                  <Link to="/timetable" className="navbar-link" onClick={handleLinkClick}>
+                    {t("session")}
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -230,12 +222,6 @@ function Navbar() {
               </>
             )}
 
-            {mobileSubmenu === "session" && (
-              <>
-                <li><Link to="/timetable" className="navbar-link" onClick={handleLinkClick}>{t("timetable")}</Link></li>
-                <li><Link to="/session" className="navbar-link" onClick={handleLinkClick}>{t("sessionList")}</Link></li>
-              </>
-            )}
 
             {/* 후원사 – 확정 후 SPONSOR_ENABLED = true 로 변경 */}
             {SPONSOR_ENABLED && mobileSubmenu === "sponsor" && (

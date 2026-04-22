@@ -1,4 +1,12 @@
 /* Page container */
+.schedule-desktop {
+  display: block;
+}
+
+.schedule-mobile {
+  display: none;
+}
+
 .timetable {
   width: 100%;
   border-collapse: collapse;
@@ -29,7 +37,19 @@
   font-weight: 600;
   background: #f8fafc;
   color: #374151;
-  width: 90px;
+  width: 110px;
+  white-space: normal;
+  text-align: center;
+}
+
+.schedule-time-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  line-height: 1.05;
+  white-space: nowrap;
 }
 
 /* Session card */
@@ -70,12 +90,91 @@
   color: #92400e;
 }
 
+.schedule-mobile-row {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.schedule-mobile-time {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1e293b;
+  text-align: center;
+}
+
+.schedule-mobile-break {
+  padding: 0.85rem 1rem;
+  background: #fef3c7;
+  border-radius: 10px;
+  color: #92400e;
+  font-weight: 600;
+}
+
+.schedule-mobile-stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.schedule-mobile-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.schedule-mobile-card {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem;
+  background: #f8fafc;
+  border-left: 4px solid #6366f1;
+  border-radius: 10px;
+}
+
+.schedule-mobile-room {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6366f1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.schedule-mobile-card strong {
+  color: #111827;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.schedule-mobile-card p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+  .schedule-desktop {
+    display: none;
+  }
+
+  .schedule-mobile {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
   .timetable th,
   .timetable td {
     padding: 8px;
     font-size: 0.8rem;
+  }
+
+  .schedule-time-stack {
+    font-size: 0.78rem;
   }
 
   .session-box strong {
@@ -84,5 +183,18 @@
 
   .session-box p {
     font-size: 0.7rem;
+  }
+
+  .schedule-mobile-row {
+    padding: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  .schedule-mobile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-mobile-card strong {
+    font-size: 0.92rem;
   }
 }

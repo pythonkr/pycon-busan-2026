@@ -5,7 +5,15 @@
 
 export const schedule = [
   {
+    time: '09:30',
+    endTime: '10:00',
+    type: 'break',
+    title: '입장 등록 (6층)',
+    titleEn: 'Registration (6F)',
+  },
+  {
     time: '10:00',
+    endTime: '10:10',
     type: 'full',
     title: '오프닝',
     titleEn: 'Opening',
@@ -13,6 +21,7 @@ export const schedule = [
   },
   {
     time: '10:10',
+    endTime: '10:50',
     type: 'full',
     tag: 'keynote',
     title: '키노트 1 (40분)',
@@ -28,6 +37,7 @@ export const schedule = [
   },
   {
     time: '11:00',
+    endTime: '11:50',
     type: 'full',
     tag: 'keynote',
     title: '키노트 2 (40분)',
@@ -43,6 +53,7 @@ export const schedule = [
   },
   {
     time: '14:00',
+    endTime: '14:30',
     type: 'parallel',
     room1: {
       title: '워크플로우 자동화의 세계: Apache Airflow 101',
@@ -63,6 +74,7 @@ export const schedule = [
   },
   {
     time: '14:50',
+    endTime: '15:20',
     type: 'parallel',
     room1: {
       title: 'Pandas 3.0, 드디어!',
@@ -83,6 +95,7 @@ export const schedule = [
   },
   {
     time: '15:40',
+    endTime: '16:10',
     type: 'parallel',
     room1: {
       title: 'AI와 페어 프로그래밍: 풀스택 개발자의 생산성 비결',
@@ -103,6 +116,7 @@ export const schedule = [
   },
   {
     time: '16:30',
+    endTime: '17:00',
     type: 'parallel',
     room1: {
       title: '도메인은 바뀌어도 데이터는 남는다 - 바이오에서 핀테크, 반도체까지 Python으로 문제를 정의하는 법',
@@ -123,6 +137,7 @@ export const schedule = [
   },
   {
     time: '17:20',
+    endTime: '17:50',
     type: 'parallel',
     room1: {
       title: 'LLM 애플리케이션 프로덕션 운영, 옵저버빌리티로 풀다',
@@ -143,6 +158,7 @@ export const schedule = [
   },
   {
     time: '18:00',
+    endTime: '18:30',
     type: 'full',
     tag: 'lightning',
     title: '라이트닝 토크',

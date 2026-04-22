@@ -10,6 +10,20 @@ function SessionCell({ title, speaker }) {
   );
 }
 
+function TimeRange({ start, end }) {
+  if (!end) {
+    return <span className="tt-time-stack">{start}</span>;
+  }
+
+  return (
+    <span className="tt-time-stack">
+      <span>{start}</span>
+      <span>~</span>
+      <span>{end}</span>
+    </span>
+  );
+}
+
 function TimetableList({ sessions }) {
   const { i18n } = useTranslation();
   const isEn = i18n.language === 'en';
@@ -33,7 +47,9 @@ function TimetableList({ sessions }) {
             if (row.type === 'full') {
               return (
                 <tr key={idx} className={`tt-row tt-row-full ${row.tag || ''}`}>
-                  <td className="tt-td tt-time">{row.time}</td>
+                  <td className="tt-td tt-time">
+                    <TimeRange start={row.time} end={row.endTime} />
+                  </td>
                   <td className="tt-td tt-cell-full" colSpan={3}>
                     <SessionCell title={title(row)} speaker={row.speaker} />
                   </td>
@@ -44,7 +60,9 @@ function TimetableList({ sessions }) {
             if (row.type === 'parallel') {
               return (
                 <tr key={idx} className="tt-row tt-row-parallel">
-                  <td className="tt-td tt-time">{row.time}</td>
+                  <td className="tt-td tt-time">
+                    <TimeRange start={row.time} end={row.endTime} />
+                  </td>
                   <td className="tt-td tt-cell-empty"></td>
                   <td className="tt-td tt-cell-session">
                     <SessionCell title={roomTitle(row.room1)} speaker={row.room1.speaker} />
@@ -58,7 +76,9 @@ function TimetableList({ sessions }) {
 
             return (
               <tr key={idx} className="tt-row tt-row-break">
-                <td className="tt-td tt-time tt-time-break">{row.time}</td>
+                <td className="tt-td tt-time tt-time-break">
+                  <TimeRange start={row.time} end={row.endTime} />
+                </td>
                 <td className="tt-td tt-cell-break" colSpan={3}>
                   {title(row) && <span className="tt-break-label">{title(row)}</span>}
                 </td>

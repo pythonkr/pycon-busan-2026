@@ -18,24 +18,10 @@ const Footer = () => {
       <div className="footer-container">
 
         {/* Organization */}
-        <h3 className="footer-title">{t("pycon")}</h3>
+        <h3 className="footer-title">{t("footerOrgName")}</h3>
 
-        <p className="footer-info">
-          {t("location")} |
-          {t("representative")} : |
-          {t("phone")} : |
-          {t("businessNumber")} :
-        </p>
-
-        <p className="footer-info">
-          {t("mailOrderNumber")} : |
-          {t("hosting")} : {t("aws")} |
-          {t("contact")} : @pycon.kr
-        </p>
-
-        <button className="footer-btn">
-          {t("checkBusiness")}
-        </button>
+        <p className="footer-info">{t("footerOrganizationInfo")}</p>
+        <p className="footer-info">{t("footerContactInfo")}</p>
 
         {/* Policy links */}
         <div className="footer-links">
@@ -48,28 +34,28 @@ const Footer = () => {
 
         {/* Social icons */}
         <div className="footer-social">
-          <a href="mailto:contact@pycon.kr" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:seminar@python.or.kr" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
           </a>
 
-          <a href="https://www.youtube.com/results?search_query=pycon+busan" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/PyConKR" target="_blank" rel="noopener noreferrer">
+            <FaXTwitter />
+          </a>
+
+          <a href="https://www.youtube.com/@PyConKRtube" target="_blank" rel="noopener noreferrer">
             <FaYoutube />
           </a>
 
-          <a href="https://x.com/home?lang=ko" target="_blank" rel="noopener noreferrer">
-            <FaXTwitter />
+          <a href="https://www.instagram.com/pycon_korea/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </a>
+
+          <a href="https://www.linkedin.com/company/pyconkorea/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
           </a>
 
           <a href="https://github.com/pythonkr" target="_blank" rel="noopener noreferrer">
             <FaGithub />
-          </a>
-
-          <a href="https://www.instagram.com/pythonkr/" target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-
-          <a href="https://www.linkedin.com/company/pythonkr/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
           </a>
         </div>
 

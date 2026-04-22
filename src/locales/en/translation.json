@@ -38,6 +38,10 @@
   "aws": "Amazon Web Services (Korea LLC)",
   "contact": "Contact",
 
+  "footerOrgName": "Python Korea",
+  "footerOrganizationInfo": "24-4, Gangnam-daero 84-gil, Gangnam-gu, Seoul, Republic of Korea | Representative : Kwon-Han Bae | Phone Number : 031-261-2203, 010-5298-6622, 010-8259-3013 (SMS) | Business Registration Number : 338-82-00046",
+  "footerContactInfo": "Mail Order Sales Registration Number : 2023-SEOUL-GANGNAM-03501 | Contact: seminar@python.or.kr",
+
   "checkBusiness": "Check Business Registration Information",
 
   "termsOfService": "Terms of Service",
