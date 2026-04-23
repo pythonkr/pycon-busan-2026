@@ -3,7 +3,6 @@ import logo from "../images/pycon-logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { SiNaver } from "react-icons/si";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 function Hero() {
   const { t } = useTranslation();
@@ -26,9 +25,6 @@ function Hero() {
           <div className="hero-divider" />
 
           <div className="hero-cta-buttons">
-            <Link to="/session" className="hero-btn hero-btn-primary">
-              {t("sessionList")} →
-            </Link>
             <a
               href="https://event-us.kr/pythonkorea/event/122855"
               target="_blank"

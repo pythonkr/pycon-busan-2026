@@ -1,12 +1,36 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { speakerAvatars } from '../data/speakerAvatars';
 import './TimetableList.css';
 
-function SessionCell({ title, speaker }) {
-  return (
+function SessionCell({ title, speaker, code }) {
+  const avatarUrl = code ? speakerAvatars[code] : null;
+
+  const body = (
     <div className="tt-session">
       <div className="tt-session-title">{title}</div>
-      {speaker && <div className="tt-session-speaker">{speaker}</div>}
+      {speaker && (
+        <div className={`tt-session-speaker ${avatarUrl ? 'has-avatar' : ''}`}>
+          {avatarUrl && (
+            <img
+              className="tt-session-avatar"
+              src={avatarUrl}
+              alt={speaker}
+              loading="lazy"
+            />
+          )}
+          <span>{speaker}</span>
+        </div>
+      )}
     </div>
+  );
+
+  if (!code) return body;
+
+  return (
+    <Link to={`/timetable/${code}`} className="tt-session-link">
+      {body}
+    </Link>
   );
 }
 
@@ -51,7 +75,7 @@ function TimetableList({ sessions }) {
                     <TimeRange start={row.time} end={row.endTime} />
                   </td>
                   <td className="tt-td tt-cell-full" colSpan={3}>
-                    <SessionCell title={title(row)} speaker={row.speaker} />
+                    <SessionCell title={title(row)} speaker={row.speaker} code={row.code} />
                   </td>
                 </tr>
               );
@@ -65,10 +89,10 @@ function TimetableList({ sessions }) {
                   </td>
                   <td className="tt-td tt-cell-empty"></td>
                   <td className="tt-td tt-cell-session">
-                    <SessionCell title={roomTitle(row.room1)} speaker={row.room1.speaker} />
+                    <SessionCell title={roomTitle(row.room1)} speaker={row.room1.speaker} code={row.room1.code} />
                   </td>
                   <td className="tt-td tt-cell-session">
-                    <SessionCell title={roomTitle(row.room2)} speaker={row.room2.speaker} />
+                    <SessionCell title={roomTitle(row.room2)} speaker={row.room2.speaker} code={row.room2.code} />
                   </td>
                 </tr>
               );

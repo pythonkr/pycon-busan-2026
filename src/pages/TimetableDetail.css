@@ -1,0 +1,230 @@
+.tt-detail-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../images/pycon-bg.png");
+  padding: 3rem 1rem;
+  color: #fff;
+}
+
+.tt-detail-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tt-detail-back {
+  color: #febd99;
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.tt-detail-back:hover {
+  color: #ffb347;
+  text-decoration: underline;
+}
+
+.tt-detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #444;
+}
+
+.tt-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tt-detail-tags kbd {
+  background-color: #b0a8fe;
+  color: #000;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tt-detail-tags kbd.tag-keynote {
+  background-color: #ffd166;
+}
+
+.tt-detail-tags kbd.tag-lightning {
+  background-color: #ff9a9a;
+}
+
+.tt-detail-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+  white-space: pre-line;
+}
+
+.tt-detail-abstract {
+  font-size: 1.05rem;
+  color: #ddd;
+  margin: 0;
+}
+
+.tt-detail-meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background-color: rgba(26, 26, 26, 0.7);
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+.meta-row {
+  display: contents;
+}
+
+.meta-label {
+  color: #999;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.meta-value {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.tt-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-heading {
+  font-size: 1.35rem;
+  color: #febd99;
+  margin: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #333;
+}
+
+.section-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ddd;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.description-box {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #1e1e24;
+  background-color: #ffffff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+.speaker-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: rgba(26, 26, 26, 0.7);
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+.speaker-avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  min-width: 5.5rem;
+  min-height: 5.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #555;
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.speaker-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.speaker-name {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #fff;
+}
+
+.speaker-bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .tt-detail-page {
+    padding: 2rem 1rem;
+  }
+
+  .tt-detail-title {
+    font-size: 1.6rem;
+  }
+
+  .tt-detail-meta {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .speaker-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .speaker-avatar {
+    width: 5rem;
+    height: 5rem;
+    min-width: 5rem;
+    min-height: 5rem;
+  }
+}

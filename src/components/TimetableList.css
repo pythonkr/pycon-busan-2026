@@ -99,6 +99,25 @@
   font-size: 0.85rem;
 }
 
+/* Link-wrapped session cell */
+.tt-session-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  margin: -0.7rem -0.9rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.tt-session-link:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.tt-session-link:hover .tt-session-title {
+  text-decoration: underline;
+}
+
 /* Session content */
 .tt-session {
   display: flex;
@@ -116,10 +135,24 @@
 .tt-session-speaker {
   font-size: 0.82rem;
   color: #666;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  line-height: 1.2;
 }
 
-.tt-session-speaker::before {
-  content: '👤 ';
+/* 아바타가 없는 경우에만 사람 이모지 표시 */
+.tt-session-speaker:not(.has-avatar)::before {
+  content: '👤';
+}
+
+.tt-session-avatar {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid #e0e0e8;
 }
 
 /* Mobile */

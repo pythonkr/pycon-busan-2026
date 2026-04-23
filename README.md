@@ -32,7 +32,7 @@ npm install
 npm run dev
 ```
 
-개발 서버는 `http://localhost:5173`에서 실행됩니다.
+개발 서버는 `http://localhost:5173/2026/`에서 실행됩니다. (Vite `base`가 `/2026/`이므로 루트 `/`로 접근하면 404가 납니다.)
 
 ### 프로덕션 빌드
 
@@ -84,9 +84,16 @@ src/
 
 ## GitHub Pages 배포
 
-1. 코드를 GitHub 저장소에 푸시합니다
-2. GitHub Actions를 사용하거나 수동으로 `dist/` 폴더를 배포합니다
-3. 저장소 설정에서 GitHub Pages를 활성화합니다
+`main` 브랜치에 푸시되면 `.github/workflows/deploy.yml`이 자동으로 빌드 → `busan.pycon.kr/2026/` 경로에 배포합니다.
+
+최초 1회 설정 (리포 관리자):
+
+1. Repo Settings → Pages → Source: **GitHub Actions**
+2. Repo Settings → Actions → General → Workflow permissions: **Read and write permissions**
+3. DNS: `busan.pycon.kr` CNAME → `pythonkr.github.io.` (`pycon.kr` zone에 `busan` 서브도메인 CNAME 추가)
+4. DNS 전파 후 Pages 설정에서 **Enforce HTTPS** 활성화
+
+루트(`busan.pycon.kr/`) 접근 시 `/2026/`으로 meta-refresh 됩니다.
 
 ## 라이선스
 

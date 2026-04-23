@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Timetable from './pages/Timetable';
+import TimetableDetail from './pages/TimetableDetail';
 import Team from './pages/Team';
 import Sprint from './pages/Sprint';
 import LightTalk from './pages/LightTalk';
@@ -36,6 +37,7 @@ function App() {
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/team" element={<Team />} />
             <Route path="/timetable" element={<Timetable />} />
+            <Route path="/timetable/:code" element={<TimetableDetail />} />
             <Route path="/sprint" element={<Sprint />} />
             <Route path="/lighttalk" element={<LightTalk />} />
             <Route path="/schedule" element={<Schedule />} />

@@ -1,0 +1,67 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Assemble _site (/2026/ subpath + root redirect + CNAME)
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site/2026
+          cp -R dist/. _site/2026/
+          echo "busan.pycon.kr" > _site/CNAME
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="ko">
+            <head>
+              <meta charset="utf-8" />
+              <title>PyCon Busan 2026</title>
+              <link rel="canonical" href="https://busan.pycon.kr/2026/" />
+              <meta http-equiv="refresh" content="0; url=/2026/" />
+              <script>location.replace('/2026/');</script>
+            </head>
+            <body>
+              <p>Redirecting to <a href="/2026/">/2026/</a>...</p>
+            </body>
+          </html>
+          HTML
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
