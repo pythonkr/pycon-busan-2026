@@ -1,5 +1,5 @@
 import React from "react";
-import "./schedule.css";
+import "./Schedule.css";
 import { schedule } from "../data/schedule";
 
 function TimeRange({ start, end }) {
