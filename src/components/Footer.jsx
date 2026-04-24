@@ -64,6 +64,11 @@ const Footer = () => {
           {t("copyright")}
         </p>
 
+        {/* Analytics notice */}
+        <p className="footer-analytics-note">
+          {t("analyticsNote")}
+        </p>
+
       </div>
     </footer>
   );

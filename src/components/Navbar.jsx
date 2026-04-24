@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
+import { trackEvent } from "../lib/analytics";
 
 const SPONSOR_ENABLED = false;
 
@@ -19,6 +20,10 @@ function Navbar() {
 
   const closeDropdown = () => setOpenMenu(null);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    trackEvent("language_toggle", { language: lang });
+  };
   const handleLinkClick = () => {
     setMenuOpen(false);
     setOpenMenu(null);
@@ -54,13 +59,13 @@ function Navbar() {
           <div className="lang-switch">
             <div
               className={`lang-option ${i18n.language === "kr" ? "active" : ""}`}
-              onClick={() => i18n.changeLanguage("kr")}
+              onClick={() => changeLanguage("kr")}
             >
               KR
             </div>
             <div
               className={`lang-option ${i18n.language === "en" ? "active" : ""}`}
-              onClick={() => i18n.changeLanguage("en")}
+              onClick={() => changeLanguage("en")}
             >
               EN
             </div>
@@ -143,13 +148,13 @@ function Navbar() {
               <div className="lang-switch">
                 <div
                   className={`lang-option ${i18n.language === "kr" ? "active" : ""}`}
-                  onClick={() => i18n.changeLanguage("kr")}
+                  onClick={() => changeLanguage("kr")}
                 >
                   KR
                 </div>
                 <div
                   className={`lang-option ${i18n.language === "en" ? "active" : ""}`}
-                  onClick={() => i18n.changeLanguage("en")}
+                  onClick={() => changeLanguage("en")}
                 >
                   EN
                 </div>
