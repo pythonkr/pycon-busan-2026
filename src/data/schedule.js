@@ -200,8 +200,8 @@ export function findSessionByCode(code) {
     }
     if (row.type === 'parallel') {
       for (const [key, label, labelEn] of [
-        ['room1', '7층 Room1', '7F Room1'],
-        ['room2', '7층 Room2', '7F Room2'],
+        ['room1', '6층 Main', '6F Main'],
+        ['room2', '7층 Room1', '7F Room1'],
       ]) {
         const r = row[key];
         if (r && r.code === code) {

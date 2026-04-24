@@ -63,7 +63,6 @@ function TimetableList({ sessions }) {
             <th className="tt-th tt-th-time"></th>
             <th className="tt-th">6층 Main</th>
             <th className="tt-th">7층 Room1</th>
-            <th className="tt-th">7층 Room2</th>
           </tr>
         </thead>
         <tbody>
@@ -74,7 +73,7 @@ function TimetableList({ sessions }) {
                   <td className="tt-td tt-time">
                     <TimeRange start={row.time} end={row.endTime} />
                   </td>
-                  <td className="tt-td tt-cell-full" colSpan={3}>
+                  <td className="tt-td tt-cell-full" colSpan={2}>
                     <SessionCell title={title(row)} speaker={row.speaker} code={row.code} />
                   </td>
                 </tr>
@@ -87,7 +86,6 @@ function TimetableList({ sessions }) {
                   <td className="tt-td tt-time">
                     <TimeRange start={row.time} end={row.endTime} />
                   </td>
-                  <td className="tt-td tt-cell-empty"></td>
                   <td className="tt-td tt-cell-session">
                     <SessionCell title={roomTitle(row.room1)} speaker={row.room1.speaker} code={row.room1.code} />
                   </td>
@@ -103,7 +101,7 @@ function TimetableList({ sessions }) {
                 <td className="tt-td tt-time tt-time-break">
                   <TimeRange start={row.time} end={row.endTime} />
                 </td>
-                <td className="tt-td tt-cell-break" colSpan={3}>
+                <td className="tt-td tt-cell-break" colSpan={2}>
                   {title(row) && <span className="tt-break-label">{title(row)}</span>}
                 </td>
               </tr>
