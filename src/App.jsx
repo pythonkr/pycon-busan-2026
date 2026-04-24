@@ -1,6 +1,8 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
+import { trackPageView } from './lib/analytics';
 import Home from './pages/Home';
 import Timetable from './pages/Timetable';
 import TimetableDetail from './pages/TimetableDetail';
@@ -22,9 +24,18 @@ import Goods from './pages/Goods';
 import './i18n';
 import './App.css';
 
+function AnalyticsListener() {
+  const location = useLocation();
+  useEffect(() => {
+    trackPageView(location.pathname + location.search);
+  }, [location.pathname, location.search]);
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <AnalyticsListener />
       <div className="app">
         <Navbar />
 

@@ -3,6 +3,7 @@ import logo from "../images/pycon-logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { SiNaver } from "react-icons/si";
 import { useTranslation } from "react-i18next";
+import { trackEvent } from "../lib/analytics";
 
 function Hero() {
   const { t } = useTranslation();
@@ -30,6 +31,7 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="hero-btn hero-btn-secondary"
+              onClick={() => trackEvent("ticket_cta_click", { location: "hero" })}
             >
               {t("buyTickets")} →
             </a>
