@@ -73,9 +73,10 @@ function TimetableList({ sessions }) {
                   <td className="tt-td tt-time">
                     <TimeRange start={row.time} end={row.endTime} />
                   </td>
-                  <td className="tt-td tt-cell-full" colSpan={2}>
+                  <td className="tt-td tt-cell-full">
                     <SessionCell title={title(row)} speaker={row.speaker} code={row.code} />
                   </td>
+                  <td className="tt-td tt-cell-empty"></td>
                 </tr>
               );
             }
