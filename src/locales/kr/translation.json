@@ -50,9 +50,8 @@
   "analyticsNote": "이 사이트는 Google Analytics로 방문 현황을 익명 수집합니다.",
 
   "heroSubtitle": "부산에서 만나는 파이썬의 물결",
-  "heroDate": "2026년 5월 9일 (토) 10:00 – 18:30",
+  "heroDate": "2026년 5월 9일 (토)\n10:00 – 18:30",
   "heroLocation": "부산 센텀벤처타운",
-  "heroLocationSub": "Centum, Busan",
   "dateLabel": "일시",
   "locationLabel": "장소",
   "sessionList": "발표 목록",

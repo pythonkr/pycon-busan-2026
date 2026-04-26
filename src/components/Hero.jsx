@@ -50,7 +50,6 @@ function Hero() {
               <div className="info-box-text">
                 <span className="info-label">{t("locationLabel")}</span>
                 <span className="info-value">{t("heroLocation")}</span>
-                <span className="info-sub">{t("heroLocationSub")}</span>
               </div>
             </div>
           </div>

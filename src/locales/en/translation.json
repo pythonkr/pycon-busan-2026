@@ -51,9 +51,8 @@
   "analyticsNote": "This site uses Google Analytics to collect anonymous visit statistics.",
 
   "heroSubtitle": "The Python Wave in Busan",
-  "heroDate": "May 9, 2026 (Sat) 10:00 – 18:30",
+  "heroDate": "May 9, 2026 (Sat)\n10:00 – 18:30",
   "heroLocation": "Busan Centum Venture Town",
-  "heroLocationSub": "Centum, Busan",
   "dateLabel": "Date",
   "locationLabel": "Venue",
   "sessionList": "Session List",

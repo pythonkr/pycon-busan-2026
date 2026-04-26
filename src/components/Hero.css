@@ -150,6 +150,7 @@
   font-weight: 700;
   color: #1e1b4b;
   line-height: 1.4;
+  white-space: pre-line;
 }
 
 .info-sub {
