@@ -26,7 +26,6 @@ function PyConBusan() {
             <div className="event-item">
               <strong>📍 {t('eventVenueLabel')}</strong>
               <p>
-                Busan Digital Innovation Academy<br />
                 {t('eventVenueDetail')}<br />
                 {t('eventVenueFloor')}
               </p>
