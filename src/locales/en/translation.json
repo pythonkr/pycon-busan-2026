@@ -7,8 +7,8 @@
   "store": "Store",
   "sponsor": "Sponsor",
   "conduct": "Code of Conduct",
-  "committee": "Organizing Committee",
-  "committeeRole": "Organizing Committee",
+  "committee": "Organizing Team",
+  "committeeRole": "Organizing Team",
   "sponsorInfo": "Sponsors",
   "sponsorRecruit": "Become a Sponsor",
   "language": "Language",
@@ -38,7 +38,7 @@
   "aws": "Amazon Web Services (Korea LLC)",
   "contact": "Contact",
 
-  "footerOrgName": "Python Korea",
+  "footerOrgName": "Python Korea User Group",
   "footerOrganizationInfo": "24-4, Gangnam-daero 84-gil, Gangnam-gu, Seoul, Republic of Korea | Representative : Kwon-Han Bae | Phone Number : 031-261-2203, 010-5298-6622, 010-8259-3013 (SMS) | Business Registration Number : 338-82-00046",
   "footerContactInfo": "Mail Order Sales Registration Number : 2023-SEOUL-GANGNAM-03501 | Contact: seminar@python.or.kr",
 
@@ -86,8 +86,8 @@
   "openNaverMap": "Open in Naver Map",
   "openGoogleMap": "Open in Google Maps",
 
-  "teamPageHeading": "Organizing Committee",
-  "teamPageDesc": "Meet the committee organizing PyCon Busan 2026.",
+  "teamPageHeading": "Organizing Team",
+  "teamPageDesc": "Meet the PyCon Busan organizing team.",
 
   "timetableHeading": "Timetable",
   "timetableDesc": "May 9, 2026 (Sat) · Busan Centum Venture Town"
