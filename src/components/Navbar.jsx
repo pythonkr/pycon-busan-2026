@@ -90,6 +90,13 @@ function Navbar() {
               </Link>
             </li>
 
+            {/* 커뮤니티 */}
+            <li>
+              <Link to="/communities" className="navbar-link">
+                {t("communities")}
+              </Link>
+            </li>
+
             {/* 티켓 */}
             <li>
               <a
@@ -181,6 +188,11 @@ function Navbar() {
                 <li>
                   <Link to="/timetable" className="navbar-link" onClick={handleLinkClick}>
                     {t("session")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/communities" className="navbar-link" onClick={handleLinkClick}>
+                    {t("communities")}
                   </Link>
                 </li>
                 <li>

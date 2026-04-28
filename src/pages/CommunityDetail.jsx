@@ -25,6 +25,7 @@ function CommunityDetail() {
 
   const name = isEn ? community.name.en : community.name.ko;
   const description = isEn ? community.description.en : community.description.ko;
+  const snsLinks = community.sns ?? [];
 
   return (
     <div className="community-detail-page">
@@ -50,15 +51,38 @@ function CommunityDetail() {
 
         <p className="community-detail-description">{description}</p>
 
-        {community.link && (
-          <a
-            href={community.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="community-detail-link"
-          >
-            {t("communityVisit")} →
-          </a>
+        {(community.link || snsLinks.length > 0) && (
+          <div className="community-detail-links">
+            {community.link && (
+              <a
+                href={community.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="community-detail-link"
+              >
+                {t("communityHomepage")} →
+              </a>
+            )}
+
+            {snsLinks.length > 0 && (
+              <div className="community-detail-sns">
+                <p className="community-detail-links-label">{t("communitySns")}</p>
+                <div className="community-detail-sns-list">
+                  {snsLinks.map((sns) => (
+                    <a
+                      key={sns.url}
+                      href={sns.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="community-detail-sns-link"
+                    >
+                      {sns.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         )}
       </div>
     </div>
