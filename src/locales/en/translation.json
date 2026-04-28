@@ -38,6 +38,13 @@
   "aws": "Amazon Web Services (Korea LLC)",
   "contact": "Contact",
 
+  "hosts": "Hosts",
+  "organizers": "Organizers",
+  "hostsOrganizers": "Hosts & Organizers",
+  "hostBusanCity": "Busan Metropolitan City",
+  "hostPythonKorea": "Python Korea User Group",
+  "organizerBipa": "Busan IT Industry Promotion Agency",
+
   "footerOrgName": "Python Korea User Group",
   "footerOrganizationInfo": "24-4, Gangnam-daero 84-gil, Gangnam-gu, Seoul, Republic of Korea | Representative : Kwon-Han Bae | Phone Number : 031-261-2203, 010-5298-6622, 010-8259-3013 (SMS) | Business Registration Number : 338-82-00046",
   "footerContactInfo": "Mail Order Sales Registration Number : 2023-SEOUL-GANGNAM-03501 | Contact: seminar@python.or.kr",
@@ -71,7 +78,7 @@
     "socks": { "name": "Socks", "description": "Soft and cozy socks." }
   },
 
-  "pyconBusanHeading": "About PyCon Busan",
+  "pyconBusanHeading": "PyCon Busan",
   "pyconBusanIntro": "Python's first festival comes to Busan! PyCon is a non-profit conference organized by Python programming language communities around the world. It is a community-driven tech conference where Python users come together to share knowledge and network. Speakers, attendees, and volunteers gather purely to vitalize the Python ecosystem with no monetary compensation.",
   "eventInfoTitle": "Event Info",
   "eventScheduleLabel": "Date",
@@ -89,5 +96,12 @@
   "teamPageDesc": "Meet the PyCon Busan organizing team.",
 
   "timetableHeading": "Timetable",
-  "timetableDesc": "May 9, 2026 (Sat) · Busan Centum Venture Town"
+  "timetableDesc": "May 9, 2026 (Sat) · Busan Centum Venture Town",
+
+  "communities": "Open Source Communities",
+  "communitiesHeading": "Open Source Communities",
+  "communitiesDesc": "Meet the Korean open source communities standing alongside PyCon Busan 2026.",
+  "communitiesBack": "Back to communities",
+  "communityVisit": "Visit community",
+  "communityNotFound": "Community not found"
 }

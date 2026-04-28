@@ -76,21 +76,11 @@ function Navbar() {
         {!isMobile && (
           <ul className="navbar-menu">
 
-            {/* 소개 */}
-            <li
-              className="dropdown"
-              onMouseEnter={() => setOpenMenu("about")}
-              onMouseLeave={closeDropdown}
-            >
-              <Link to="/pyconbusan" className="navbar-link">
-                {t("about")}
+            {/* 준비위원회 */}
+            <li>
+              <Link to="/team" className="navbar-link">
+                {t("committee")}
               </Link>
-              {openMenu === "about" && (
-                <ul className="dropdown-menu">
-                  <li><Link to="/pyconbusan" className="dropdown-link">{t("pycon")}</Link></li>
-                  <li><Link to="/team" className="dropdown-link">{t("committee")}</Link></li>
-                </ul>
-              )}
             </li>
 
             {/* 세션 */}
@@ -183,8 +173,10 @@ function Navbar() {
 
             {!mobileSubmenu && (
               <>
-                <li onClick={() => setMobileSubmenu("about")} className="navbar-link">
-                  {t("about")}
+                <li>
+                  <Link to="/team" className="navbar-link" onClick={handleLinkClick}>
+                    {t("committee")}
+                  </Link>
                 </li>
                 <li>
                   <Link to="/timetable" className="navbar-link" onClick={handleLinkClick}>
@@ -219,14 +211,6 @@ function Navbar() {
                 )}
               </>
             )}
-
-            {mobileSubmenu === "about" && (
-              <>
-                <li><Link to="/pyconbusan" className="navbar-link" onClick={handleLinkClick}>{t("pycon")}</Link></li>
-                <li><Link to="/team" className="navbar-link" onClick={handleLinkClick}>{t("committee")}</Link></li>
-              </>
-            )}
-
 
             {/* 후원사 – 확정 후 SPONSOR_ENABLED = true 로 변경 */}
             {SPONSOR_ENABLED && mobileSubmenu === "sponsor" && (

@@ -9,6 +9,9 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import hostBusanLogo from "../images/host-busan.png";
+import hostPythonKrLogo from "../images/host-pythonkr.png";
+import organizerBipaLogo from "../images/organizer-bipa.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -16,6 +19,24 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+
+        {/* Hosts & Organizers */}
+        <div className="footer-hosts">
+          <div className="footer-hosts-row">
+            <span className="footer-hosts-label">{t("hostsOrganizers")}</span>
+            <div className="footer-hosts-logos">
+              <div className="footer-logo">
+                <img src={hostBusanLogo} alt={t("hostBusanCity")} />
+              </div>
+              <div className="footer-logo">
+                <img src={organizerBipaLogo} alt={t("organizerBipa")} />
+              </div>
+              <div className="footer-logo">
+                <img src={hostPythonKrLogo} alt={t("hostPythonKorea")} />
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Organization */}
         <h3 className="footer-title">{t("footerOrgName")}</h3>
