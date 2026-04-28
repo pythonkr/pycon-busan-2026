@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import { trackEvent } from '../lib/analytics';
+import pyconLogo from '../images/pycon-logo.png';
 import './About.css';
 
 function PyConBusan() {
@@ -8,6 +10,7 @@ function PyConBusan() {
     <div className="about-page">
       <div className="about-container">
 
+        <img src={pyconLogo} alt="PyCon Busan 2026" className="about-logo" />
         <h1 className="about-heading">🛥️ {t('pyconBusanHeading')} 🏖️</h1>
 
         <section className="about-section">
@@ -30,11 +33,18 @@ function PyConBusan() {
                 {t('eventVenueFloor')}
               </p>
             </div>
+          </div>
 
-            <div className="event-item">
-              <strong>🎟 {t('eventRegistrationLabel')}</strong>
-              <p>{t('eventRegistrationDate')}</p>
-            </div>
+          <div className="event-cta">
+            <a
+              href="https://event-us.kr/pythonkorea/event/122855"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="event-cta-btn"
+              onClick={() => trackEvent('ticket_cta_click', { location: 'pyconbusan' })}
+            >
+              🎫 {t('buyTickets')} →
+            </a>
           </div>
         </section>
 

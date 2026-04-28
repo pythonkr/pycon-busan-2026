@@ -3,7 +3,6 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 
 import Navbar from './components/Navbar';
 import { trackPageView } from './lib/analytics';
-import Home from './pages/Home';
 import Timetable from './pages/Timetable';
 import TimetableDetail from './pages/TimetableDetail';
 import Team from './pages/Team';
@@ -19,6 +18,8 @@ import Session from './pages/Session';
 import Prospectus from './pages/Prospectus';
 import Patrons from './pages/Patrons';
 import Tickets from './pages/Tickets';
+import Communities from './pages/Communities';
+import CommunityDetail from './pages/CommunityDetail';
 import Footer from './components/Footer';
 import Goods from './pages/Goods';
 import './i18n';
@@ -41,8 +42,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/pyconbusan" element={<PyConBusan />} />
+            <Route path="/" element={<PyConBusan />} />
             <Route path="/safety" element={<Safety />} />
             <Route path="/conduct" element={<Conduct />} />
             <Route path="/volunteer" element={<Volunteer />} />
@@ -58,6 +58,8 @@ function App() {
             <Route path="/prospectus" element={<Prospectus />} />
             <Route path="/patrons" element={<Patrons />} />
             <Route path="/tickets" element={<Tickets />} />
+            <Route path="/communities" element={<Communities />} />
+            <Route path="/communities/:id" element={<CommunityDetail />} />
           </Routes>
         </main>
 

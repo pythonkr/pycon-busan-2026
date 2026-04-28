@@ -37,6 +37,13 @@
   "contact": "문의",
   "aws": "아마존 웹 서비스 코리아(AWS Korea LLC)",
 
+  "hosts": "주최",
+  "organizers": "주관",
+  "hostsOrganizers": "주관/주최",
+  "hostBusanCity": "부산광역시",
+  "hostPythonKorea": "(사)파이썬사용자모임",
+  "organizerBipa": "부산정보산업진흥원",
+
   "footerOrgName": "사단법인 파이썬 사용자모임",
   "footerOrganizationInfo": "서울특별시 강남구 강남대로84길 24-4 | 대표자명 : 배권한 | 대표 전화 번호 : 031-261-2203, 010-5298-6622, 010-8259-3013 (문자) | 사업자 등록 번호 : 338-82-00046",
   "footerContactInfo": "통신 판매 번호 : 2023-서울강남-03501 | 문의: seminar@python.or.kr",
@@ -71,7 +78,7 @@
     "socks": { "name": "양말", "description": "부드럽고 따뜻한 양말입니다." }
   },
 
-  "pyconBusanHeading": "파이콘 부산이란",
+  "pyconBusanHeading": "파이콘 부산",
   "pyconBusanIntro": "부산에 처음으로 파이썬 축제가 열립니다! 파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 컨퍼런스입니다. 파이썬 프로그래밍 언어를 사용하는 사용자들이 함께 지식을 공유하고 네트워킹하는 커뮤니티 중심의 기술 컨퍼런스입니다. 발표자, 참가자, 자원봉사자 모두가 금전적 보상 없이 순수하게 파이썬 생태계 활성화를 위해 모이는 행사입니다.",
   "eventInfoTitle": "행사 정보",
   "eventScheduleLabel": "일정",
@@ -89,5 +96,12 @@
   "teamPageDesc": "파이콘 부산 2026을 준비하는 준비위원회입니다.",
 
   "timetableHeading": "시간표",
-  "timetableDesc": "2026년 5월 9일 (토) · 부산 센텀벤처타운"
+  "timetableDesc": "2026년 5월 9일 (토) · 부산 센텀벤처타운",
+
+  "communities": "오픈소스 커뮤니티",
+  "communitiesHeading": "오픈소스 커뮤니티",
+  "communitiesDesc": "PyCon Busan 2026과 함께하는 한국의 오픈소스 커뮤니티들을 소개합니다.",
+  "communitiesBack": "커뮤니티 목록으로",
+  "communityVisit": "커뮤니티 방문하기",
+  "communityNotFound": "커뮤니티를 찾을 수 없습니다"
 }
