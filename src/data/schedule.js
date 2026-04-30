@@ -111,10 +111,10 @@ export const schedule = [
       speaker: '양효정',
     },
     room2: {
-      code: 'llm-cryptanalysis',
-      title: 'Unlocking Secrets: Can Python Reveal the Strengths of LLMs in Cryptanalysis?',
-      titleEn: 'Unlocking Secrets: Can Python Reveal the Strengths of LLMs in Cryptanalysis?',
-      speaker: 'Pradana Nadhiar Ridho Wahyu',
+      code: 'cpython-3-15',
+      title: 'CPython 3.15: Updates Rivals Will Use: Profiler, JIT, noGIL, Lazy Imports, UTF-8',
+      titleEn: 'CPython 3.15: Updates Rivals Will Use: Profiler, JIT, noGIL, Lazy Imports, UTF-8',
+      speaker: 'Petr Andreev',
     },
   },
   {
@@ -134,10 +134,10 @@ export const schedule = [
       speaker: '김경서',
     },
     room2: {
-      code: 'cpython-3-15',
-      title: 'CPython 3.15: Updates Rivals Will Use: Profiler, JIT, noGIL, Lazy Imports, UTF-8',
-      titleEn: 'CPython 3.15: Updates Rivals Will Use: Profiler, JIT, noGIL, Lazy Imports, UTF-8',
-      speaker: 'Petr Andreev',
+      code: 'llm-cryptanalysis',
+      title: 'Unlocking Secrets: Can Python Reveal the Strengths of LLMs in Cryptanalysis?',
+      titleEn: 'Unlocking Secrets: Can Python Reveal the Strengths of LLMs in Cryptanalysis?',
+      speaker: 'Pradana Nadhiar Ridho Wahyu',
     },
   },
   {
