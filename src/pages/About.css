@@ -63,6 +63,8 @@
   color: #f0f0f0;
   line-height: 1.8;
   text-align: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Hero section for location */
