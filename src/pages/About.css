@@ -4,6 +4,9 @@
   background-image:
     linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
     url("../images/pycon-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -66,11 +69,6 @@
 .location-hero {
   position: relative;
   width: 100%;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-    url("../images/pycon-bg.png");
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
