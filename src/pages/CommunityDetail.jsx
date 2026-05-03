@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { communities } from "../data/communities";
 import "./CommunityDetail.css";
+import { useEffect } from "react";
 
 function CommunityDetail() {
   const { id } = useParams();
@@ -26,6 +27,10 @@ function CommunityDetail() {
   const name = isEn ? community.name.en : community.name.ko;
   const description = isEn ? community.description.en : community.description.ko;
   const snsLinks = community.sns ?? [];
+
+  useEffect(() => {
+    window.scrollTo({top: 0});
+  }, [])
 
   return (
     <div className="community-detail-page">
