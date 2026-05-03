@@ -6,9 +6,6 @@ import { sessionDetails } from "../data/sessionDetails";
 import { speakerAvatars } from "../data/speakerAvatars";
 import "./TimetableDetail.css";
 
-const PLACEHOLDER_TEXT =
-  "해당 정보가 아직 준비되지 않았습니다. 확정되는 대로 업데이트됩니다.";
-
 function TimeRange({ start, end }) {
   if (!start) return <span>TBA</span>;
   if (!end) return <span>{start}</span>;
@@ -26,20 +23,20 @@ function pickLang(valKo, valEn, isEn) {
 
 function TimetableDetail() {
   const { code } = useParams();
-  const { i18n } = useTranslation();
-  const isEn = i18n.language === "en";
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language?.startsWith("en");
   const session = findSessionByCode(code);
 
   if (!session) {
     return (
       <div className="tt-detail-page">
         <div className="tt-detail-container">
-          <h1 className="tt-detail-title">세션을 찾을 수 없습니다</h1>
+          <h1 className="tt-detail-title">{t("timetableDetailNotFoundTitle")}</h1>
           <p className="tt-detail-abstract">
-            요청하신 세션 코드 <code>{code}</code> 에 해당하는 정보가 없습니다.
+            {t("timetableDetailNotFoundDesc", { code })}
           </p>
           <Link to="/timetable" className="tt-detail-back">
-            ← 타임테이블로 돌아가기
+            ← {t("timetableDetailBack")}
           </Link>
         </div>
       </div>
@@ -50,7 +47,7 @@ function TimetableDetail() {
   const title =
     isEn && session.titleEn != null ? session.titleEn : session.title;
   const room = isEn ? session.roomEn : session.room;
-  const speakerName = session.speaker || "TBD";
+  const speakerName = isEn && session.speakerEn != null ? session.speakerEn : session.speaker || "TBD";
   const speakerInitial = speakerName.trim().slice(0, 1) || "?";
   const avatarUrl = speakerAvatars[code];
 
@@ -61,7 +58,7 @@ function TimetableDetail() {
     <div className="tt-detail-page">
       <div className="tt-detail-container">
         <Link to="/timetable" className="tt-detail-back">
-          ← 타임테이블로 돌아가기
+          ← {t("timetableDetailBack")}
         </Link>
 
         <header className="tt-detail-header">
@@ -75,28 +72,30 @@ function TimetableDetail() {
 
         <section className="tt-detail-meta">
           <div className="meta-row">
-            <span className="meta-label">시간</span>
+            <span className="meta-label">{t("timetableDetailTime")}</span>
             <span className="meta-value">
               <TimeRange start={session.time} end={session.endTime} />
             </span>
           </div>
           <div className="meta-row">
-            <span className="meta-label">장소</span>
+            <span className="meta-label">{t("timetableDetailLocation")}</span>
             <span className="meta-value">{room}</span>
           </div>
           <div className="meta-row">
-            <span className="meta-label">발표자</span>
+            <span className="meta-label">{t("timetableDetailSpeaker")}</span>
             <span className="meta-value">{speakerName}</span>
           </div>
         </section>
 
         <section className="tt-detail-section">
-          <h2 className="section-heading">세션 소개</h2>
-          <div className="description-box">{description || PLACEHOLDER_TEXT}</div>
+          <h2 className="section-heading">{t("timetableDetailSessionIntro")}</h2>
+          <div className="description-box">
+            {description || t("timetableDetailPlaceholder")}
+          </div>
         </section>
 
         <section className="tt-detail-section">
-          <h2 className="section-heading">발표자 소개</h2>
+          <h2 className="section-heading">{t("timetableDetailSpeakerIntro")}</h2>
           <article className="speaker-card">
             <div className="speaker-avatar">
               {avatarUrl ? (
@@ -109,7 +108,7 @@ function TimetableDetail() {
             </div>
             <div className="speaker-info">
               <h3 className="speaker-name">{speakerName}</h3>
-              <p className="speaker-bio">{bio || PLACEHOLDER_TEXT}</p>
+              <p className="speaker-bio">{bio || t("timetableDetailPlaceholder")}</p>
             </div>
           </article>
         </section>

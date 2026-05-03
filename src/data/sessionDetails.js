@@ -15,6 +15,12 @@ export const sessionDetails = {
     descriptionKo: "지난 한 해 동안 세계 곳곳의 파이썬 컨퍼런스에서 발표하고, 각 지역의 파이썬 커뮤니티를 만나며, CPython 코어 개발자들과 직접 이야기를 나눴습니다.\n그 과정에서 커뮤니티가 가진 힘과 중요성, 그리고 그 안에 자리한 취약한 지점들이 동시에 보였습니다.\n\n__이 발표에서 공유하는 것__:\n- 교육 시스템을 통해 더 많은 사람들이 CPython에 기여하게 만드는 방법\n- 사람들을 영감으로 끌어당겨 파이썬 커뮤니티에 참여시키고, 그 모멘텀을 이어가게 하는 예술적 접근\n\n__마지막에는__, 여러분만의 \"파이썬 기회 지도\"와 다음 발걸음 — 컨퍼런스와 커뮤니티를 인생·커리어의 전환점으로, 의미 있는 여정으로, 그리고 실질적인 임팩트로 만드는 방법 — 을 들고 강연장을 떠나게 됩니다.\n\n__왜 이 주제를 다룰 자격이 있는가__:\n저는 대학에서 깊이 있는 파이썬을 가르치고, 코어 개발자 및 Steering Council과 대화하며, 국제 파이썬 컨퍼런스에서 발표하고, 컨퍼런스 발표 멘토링을 합니다. 사람들의 CPython 기여를 돕고 있고, PSF 멤버이며, CPython을 음악으로 만들고, 파이썬과 함께 살아갑니다.",
     descriptionEn: "Last year, I spoke at Py-conferences across the world, met local Py-communities, and talked with CPython core-devs. \nIt showed me a community superpower and importance, while revealing fragile points.  \n\n__I share my experience__:\n- how to bring more contributors to CPython via an education system\n- art approaches which can inspire people and involve them into Python community and keep the momentum alive\n\n__In the end__, you’ll leave with a Python opportunity map, and next move: turn conferences and community into life/career moments, meaningful travel, and real impact.\n\n__Why can I talk about it__:\nI teach deep Python in univercities, talk with core-devs and Steering Concile, speek in international python conferences, mentoring reports for conferences, help people contribute to CPython, PSF member, do music about CPython and live Python.",
   },
+  "community-intro": {
+    bioKo: "PyCon Busan 2026 준비위원회",
+    bioEn: "PyCon Busan 2026 Organizing Committee",
+    descriptionKo: "PyCon Busan 2026에 함께한 여러 개발 커뮤니티를 간단히 소개하는 시간입니다. 각 커뮤니티가 어떤 사람들과 어떤 관심사를 바탕으로 활동하는지, 그리고 행사장에서 어떤 방식으로 만나볼 수 있는지 짧게 살펴봅니다. 서로의 활동을 알아가고, 새로운 연결을 시작하는 가벼운 출발점이 되길 바랍니다.",
+    descriptionEn: "This is a short introduction to the developer communities joining PyCon Busan 2026. We'll briefly look at who they are, what they care about, and how you can meet them at the event. We hope it serves as a light starting point for getting to know one another and making new connections.",
+  },
   "pandas-3": {
     bioKo: "Scala를 사용해서 추천시스템을 설계 및 구성하는 일을 주로 담당했습니다. 데이터분석 및 파이프라인 구축에 관심이 많으며, 현재는 우분투한국커뮤니티와 Airflow 한국 사용자 모임에서 운영진으로 활동하고 있습니다.",
     bioEn: "Primarily responsible for designing and building recommendation systems using Scala. Deeply interested in data analysis and pipeline construction, and currently serving on the organizing team of the Ubuntu Korea Community and the Airflow Korea User Group.",

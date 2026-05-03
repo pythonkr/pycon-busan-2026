@@ -97,6 +97,15 @@
 
   "timetableHeading": "Timetable",
   "timetableDesc": "May 9, 2026 (Sat) · Busan Centum Venture Town",
+  "timetableDetailBack": "Back to timetable",
+  "timetableDetailNotFoundTitle": "Session not found",
+  "timetableDetailNotFoundDesc": "No information was found for the requested session code {{code}}.",
+  "timetableDetailTime": "Time",
+  "timetableDetailLocation": "Location",
+  "timetableDetailSpeaker": "Speaker",
+  "timetableDetailSessionIntro": "Session Overview",
+  "timetableDetailSpeakerIntro": "Speaker Bio",
+  "timetableDetailPlaceholder": "This information is not ready yet. It will be updated once confirmed.",
 
   "communities": "Open Source Communities",
   "communitiesHeading": "Open Source Communities",

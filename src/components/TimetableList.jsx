@@ -3,23 +3,24 @@ import { Link } from 'react-router-dom';
 import { speakerAvatars } from '../data/speakerAvatars';
 import './TimetableList.css';
 
-function SessionCell({ title, speaker, code }) {
+function SessionCell({ title, speaker, speakerEn, code, isEn }) {
   const avatarUrl = code ? speakerAvatars[code] : null;
+  const speakerLabel = isEn && speakerEn != null ? speakerEn : speaker;
 
   const body = (
     <div className="tt-session">
       <div className="tt-session-title">{title}</div>
-      {speaker && (
+      {speakerLabel && (
         <div className={`tt-session-speaker ${avatarUrl ? 'has-avatar' : ''}`}>
           {avatarUrl && (
             <img
               className="tt-session-avatar"
               src={avatarUrl}
-              alt={speaker}
+              alt={speakerLabel}
               loading="lazy"
             />
           )}
-          <span>{speaker}</span>
+          <span>{speakerLabel}</span>
         </div>
       )}
     </div>
@@ -50,7 +51,7 @@ function TimeRange({ start, end }) {
 
 function TimetableList({ sessions }) {
   const { i18n } = useTranslation();
-  const isEn = i18n.language === 'en';
+  const isEn = i18n.language?.startsWith('en');
 
   const title = (row) => (isEn && row.titleEn != null ? row.titleEn : row.title);
   const roomTitle = (room) => (isEn && room.titleEn != null ? room.titleEn : room.title);
@@ -74,7 +75,13 @@ function TimetableList({ sessions }) {
                     <TimeRange start={row.time} end={row.endTime} />
                   </td>
                   <td className="tt-td tt-cell-full">
-                    <SessionCell title={title(row)} speaker={row.speaker} code={row.code} />
+                    <SessionCell
+                      title={title(row)}
+                      speaker={row.speaker}
+                      speakerEn={row.speakerEn}
+                      code={row.code}
+                      isEn={isEn}
+                    />
                   </td>
                   <td className="tt-td tt-cell-empty"></td>
                 </tr>
@@ -88,10 +95,22 @@ function TimetableList({ sessions }) {
                     <TimeRange start={row.time} end={row.endTime} />
                   </td>
                   <td className="tt-td tt-cell-session">
-                    <SessionCell title={roomTitle(row.room1)} speaker={row.room1.speaker} code={row.room1.code} />
+                    <SessionCell
+                      title={roomTitle(row.room1)}
+                      speaker={row.room1.speaker}
+                      speakerEn={row.room1.speakerEn}
+                      code={row.room1.code}
+                      isEn={isEn}
+                    />
                   </td>
                   <td className="tt-td tt-cell-session">
-                    <SessionCell title={roomTitle(row.room2)} speaker={row.room2.speaker} code={row.room2.code} />
+                    <SessionCell
+                      title={roomTitle(row.room2)}
+                      speaker={row.room2.speaker}
+                      speakerEn={row.room2.speakerEn}
+                      code={row.room2.code}
+                      isEn={isEn}
+                    />
                   </td>
                 </tr>
               );

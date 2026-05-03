@@ -6,7 +6,7 @@ import "./CommunityDetail.css";
 function CommunityDetail() {
   const { id } = useParams();
   const { t, i18n } = useTranslation();
-  const isEn = i18n.language === "en";
+  const isEn = i18n.language?.startsWith("en");
 
   const community = communities.find((c) => c.id === id);
 

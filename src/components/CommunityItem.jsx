@@ -4,7 +4,7 @@ import "./CommunityItem.css";
 
 function CommunityItem({ community }) {
   const { i18n } = useTranslation();
-  const isEn = i18n.language === "en";
+  const isEn = i18n.language?.startsWith("en");
   const name = isEn ? community.name.en : community.name.ko;
 
   return (

@@ -97,6 +97,15 @@
 
   "timetableHeading": "시간표",
   "timetableDesc": "2026년 5월 9일 (토) · 부산 센텀벤처타운",
+  "timetableDetailBack": "타임테이블로 돌아가기",
+  "timetableDetailNotFoundTitle": "세션을 찾을 수 없습니다",
+  "timetableDetailNotFoundDesc": "요청하신 세션 코드 {{code}} 에 해당하는 정보가 없습니다.",
+  "timetableDetailTime": "시간",
+  "timetableDetailLocation": "장소",
+  "timetableDetailSpeaker": "발표자",
+  "timetableDetailSessionIntro": "세션 소개",
+  "timetableDetailSpeakerIntro": "발표자 소개",
+  "timetableDetailPlaceholder": "해당 정보가 아직 준비되지 않았습니다. 확정되는 대로 업데이트됩니다.",
 
   "communities": "오픈소스 커뮤니티",
   "communitiesHeading": "오픈소스 커뮤니티",
