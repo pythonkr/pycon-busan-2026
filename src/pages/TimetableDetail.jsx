@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { findSessionByCode } from "../data/schedule";
@@ -53,6 +53,10 @@ function TimetableDetail() {
 
   const description = pickLang(detail.descriptionKo, detail.descriptionEn, isEn);
   const bio = pickLang(detail.bioKo, detail.bioEn, isEn);
+
+  useEffect(() => {
+    window.scrollTo({top: 0});
+  }, [])
 
   return (
     <div className="tt-detail-page">
