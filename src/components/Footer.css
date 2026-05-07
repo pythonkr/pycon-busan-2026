@@ -105,6 +105,16 @@
   flex-wrap: wrap;
 }
 
+.footer-hosts-row--stacked {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-hosts-row--stacked .footer-hosts-label {
+  text-align: center;
+  min-width: auto;
+}
+
 .footer-hosts-label {
   font-size: 1.4rem;
   font-weight: 700;
