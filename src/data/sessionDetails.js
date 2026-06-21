@@ -17,6 +17,7 @@ export const sessionDetails = {
     bioEn: "Specializes in CPython internals, optimization, and high-performance computing.  \nDriven by GPU acceleration, CPU vectorization. Evolved from ML systems to CPython core research engineer.  \n8+ years leading teams in AI, maths, and physics. PyCon speaker.  \nLecturer at Moscow Institute of Physics and Technology – top Russian universities.  \nSpeak in PyCons around the World and creating songs about CPython.\nOpen to talks and collaboration.",
     descriptionKo: "지난 한 해 동안 세계 곳곳의 파이썬 컨퍼런스에서 발표하고, 각 지역의 파이썬 커뮤니티를 만나며, CPython 코어 개발자들과 직접 이야기를 나눴습니다.\n그 과정에서 커뮤니티가 가진 힘과 중요성, 그리고 그 안에 자리한 취약한 지점들이 동시에 보였습니다.\n\n__이 발표에서 공유하는 것__:\n- 교육 시스템을 통해 더 많은 사람들이 CPython에 기여하게 만드는 방법\n- 사람들을 영감으로 끌어당겨 파이썬 커뮤니티에 참여시키고, 그 모멘텀을 이어가게 하는 예술적 접근\n\n__마지막에는__, 여러분만의 \"파이썬 기회 지도\"와 다음 발걸음 — 컨퍼런스와 커뮤니티를 인생·커리어의 전환점으로, 의미 있는 여정으로, 그리고 실질적인 임팩트로 만드는 방법 — 을 들고 강연장을 떠나게 됩니다.\n\n__왜 이 주제를 다룰 자격이 있는가__:\n저는 대학에서 깊이 있는 파이썬을 가르치고, 코어 개발자 및 Steering Council과 대화하며, 국제 파이썬 컨퍼런스에서 발표하고, 컨퍼런스 발표 멘토링을 합니다. 사람들의 CPython 기여를 돕고 있고, PSF 멤버이며, CPython을 음악으로 만들고, 파이썬과 함께 살아갑니다.",
     descriptionEn: "Last year, I spoke at Py-conferences across the world, met local Py-communities, and talked with CPython core-devs. \nIt showed me a community superpower and importance, while revealing fragile points.  \n\n__I share my experience__:\n- how to bring more contributors to CPython via an education system\n- art approaches which can inspire people and involve them into Python community and keep the momentum alive\n\n__In the end__, you’ll leave with a Python opportunity map, and next move: turn conferences and community into life/career moments, meaningful travel, and real impact.\n\n__Why can I talk about it__:\nI teach deep Python in univercities, talk with core-devs and Steering Concile, speek in international python conferences, mentoring reports for conferences, help people contribute to CPython, PSF member, do music about CPython and live Python.",
+    youtubeId: "AXJzHol7JdQ"
   },
   "community-intro": {
     bioKo: "PyCon Busan 2026 준비위원회",
@@ -29,59 +30,69 @@ export const sessionDetails = {
     bioEn: "Primarily responsible for designing and building recommendation systems using Scala. Deeply interested in data analysis and pipeline construction, and currently serving on the organizing team of the Ubuntu Korea Community and the Airflow Korea User Group.",
     descriptionKo: "이번 가이드에서는 복사 온 라이트(Copy-on-Write)가 기본으로 적용되고 PyArrow 백엔드가 강화되어 성능이 대폭 향상된 Pandas 3.0의 핵심 변경사항과 새로운 기능들을 깊이 있게 살펴봅니다. 특히 대용량 데이터 처리 시 메모리 효율을 극대화하고 연산 속도를 높일 수 있는 구체적인 활용 방안을 상세히 짚어보겠습니다. 이와 더불어 실무에 즉시 적용할 수 있는 세 가지 효율적인 데이터 분석 팁을 제안하며, 그 첫 번째로 각 변수는 열에, 관측치는 행에 배치하는 '깔끔한 데이터(Tidy Data)' 원칙을 고수하여 전처리 과정을 간소화하는 방법을 다룹니다. 두 번째로는 느린 반복문(for-loop) 대신 Pandas의 내장 벡터화 연산을 적극적으로 활용하여 데이터 처리 병목 현상을 해결하는 전략을 소개합니다. 마지막으로 메서드 체이닝(Method Chaining) 기법을 통해 불필요한 중간 변수 생성을 막고 논리적인 데이터 가공 흐름에 따라 코드의 가독성을 끌어올리는 실전 노하우를 전달해 드립니다.",
     descriptionEn: "This session takes an in-depth look at the key changes and new features in Pandas 3.0, where Copy-on-Write is now enabled by default and the PyArrow backend has been strengthened for a major performance boost. We'll walk through concrete ways to maximize memory efficiency and accelerate computation when processing large-scale data. In addition, we'll propose three practical data-analysis tips you can apply right away: first, simplifying preprocessing by sticking to the 'Tidy Data' principle — each variable in a column, each observation in a row; second, resolving processing bottlenecks by actively using Pandas' built-in vectorized operations instead of slow for-loops; and finally, hands-on techniques for improving code readability through method chaining, which avoids unnecessary intermediate variables and lets your code follow a logical data-transformation flow.",
+    youtubeId: "8iMyjBEkSDg"
   },
   "custom-claude-code-harness": {
     bioKo: "AI 에이전트 인프라를 만드는 업무를 하고 있습니다. 에이전트 네이티브 업무 문화를 즐겁게 실험하며 지내는 AI Engineer, Scone 입니다.",
     bioEn: "I work on building AI-agent infrastructure. I'm Scone — an AI engineer who enjoys experimenting with an agent-native work culture.",
     descriptionKo: "Claude Code를 오래 쓰다 보면 출력이 너무 길어져서 정작 중요한 지시가 묻히는 일이 발생합니다. \"나만의 Custom Claude Code Harness\" 발표는 이런 문제를 “에이전트를 더 잘 쓰는 요령” 정도로 보지 않고, 내 작업 방식에 맞게 사용 환경을 설계하는 문제로 바라봅니다. 무엇을 넣어줄지, 무엇을 줄일지, 무엇을 나눌지, 무엇을 남길지. 이 네 가지 관점을 바탕으로, 각자에게 맞는 Custom Claude Code Harness를 어떻게 만들 수 있는지 이야기합니다.",
     descriptionEn: "Use Claude Code long enough and its output gets so verbose that the truly important instructions end up buried. This talk — \"My Own Custom Claude Code Harness\" — doesn't treat that as just \"tips for using agents better,\" but reframes it as a problem of designing your own environment to fit the way you work. What to feed in, what to trim, what to split, what to leave out: based on these four perspectives, we'll discuss how each of you can build a Custom Claude Code Harness that fits you.",
+    youtubeId: "_4rrOwF6CyI"
   },
   "airflow-101": {
     bioKo: "Apache Airflow 커미터",
     bioEn: "Apache Airflow Committer",
     descriptionKo: "Airflow 101은 ‘그래서 이거 왜 쓰는 건데?’라는 질문에 답하는 시간입니다. Apache Airflow의 기본 개념부터 실제로 어떻게 워크플로우를 자동화하는지까지 가볍게 감을 잡는 입문 세션입니다.",
     descriptionEn: "Airflow 101 is a session that answers the question, \"So why would I actually use this?\" A light introductory session that gives you a feel for Apache Airflow — from the core concepts to how workflows are actually automated in practice.",
+    youtubeId: "wTIUDjvUX4g"
   },
   "dtw-motion-analysis": {
     bioKo: "안녕하세요, 인도네시아에서 온 Melisa Krisnawati입니다. 주로 파이썬을 활용해 AI/ML 분야를 연구하고 있으며, 동서대학교에서 석사 과정을 갓 마쳤습니다.",
     bioEn: "Hi my name is Melisa Krisnawati from Indonesia, my research is on AI/ML mostly using Python i'm a freshgraduate master student in Dongseo University",
     descriptionKo: "두 동작이 같은지 다른지를 어떻게 판별할 수 있을까요? 사람의 움직임은 속도와 크기가 매번 달라지기 때문에 전통적인 거리 측정 방식만으로는 충분하지 않습니다. Dynamic Time Warping(DTW)은 시간적 왜곡이 있는 시퀀스 데이터까지도 정렬해 주는 해법을 제시합니다. 이 발표에서는 DTW를 활용해 파이썬으로 사람의 움직임을 측정하고 분류하는 방법을 살펴봅니다.",
     descriptionEn: "How do we determine whether two movements are the same or different? Human motion is often variable in speed and scale, making traditional distance metrics insufficient. Dynamic Time Warping (DTW) offers a solution by aligning sequences of data, even with temporal distortions. This talk explores how Python can be used to measure and classify human movements through Dynamic Time Warping",
+    youtubeId: "N8c6g7Krr2U"
   },
   "ai-pair-programming": {
     bioKo: "백엔드 개발자에서 시작해 현재는 풀스택 개발자로 일하고 있습니다. 여러 기술스택과 도메인을 거쳐 현재는 AI와 함께 일하기 좋은 환경을 만들기에 빠져있습니다.",
     bioEn: "I started out as a backend developer and now work as a full-stack developer. Having moved across many tech stacks and domains, I'm currently deeply invested in building environments where working alongside AI is a pleasure.",
     descriptionKo: "페어 프로그래밍을 만나 성장할 수 있었던 환경을, AI와 함께 재현해보았습니다. 혼자 일할 때도 성장할 수 있는 개발 환경을 만드는 3가지 세팅을 공유하며, 현업 개발자가 AI와 함께 어떻게 더 좋은 생산성을 낼 수 있는지에 대해 공유합니다.",
     descriptionEn: "I set out to recreate — together with AI — the kind of environment that once helped me grow through pair programming. I'll share three setups for a development environment where you can keep growing even while working alone, and talk about how working developers can achieve greater productivity alongside AI.",
+    youtubeId: "tOleHpbED_g"
   },
   "llm-cryptanalysis": {
     bioKo: "한동대학교 ICT 정책 전공 석사 과정에 재학 중입니다.",
     bioEn: "Master’s student in ICT Policy at Handong Global University",
     descriptionKo: "이 세션에서는 파이썬으로 직접 만든 벤치마킹 프레임워크를 통해, 대표적인 LLM들을 다양한 암호 해독 과제 위에 올려놓고 시험해 봅니다. 고전 암호부터 보다 복잡한 암호 체계까지를 다루며, 각 모델이 문제를 어떻게 추론해 풀어나가는지 라이브로 확인할 수 있습니다. 그동안 파이썬은 평문을 모델에 전달하고, 응답을 수집하고, 결과를 채점하는 평가 파이프라인 전체를 담당합니다.\n암호학 사전 지식은 필요 없습니다. 호기심만 가지고 와 주세요.",
     descriptionEn: "In this session, we use Python to build a hands-on benchmarking framework that puts leading LLMs to the test across a series of cryptographic challenges, from classic ciphers to more complex encryption schemes. You'll see live how each model reasons through the problem, while Python handles the evaluation feeding ciphertext, collecting responses, and scoring results.\nNo cryptography background needed. Just bring your curiosity.",
+    youtubeId: "_uY3ZmmIkMQ"
   },
   "python-across-domains": {
     bioKo: "서로 다른 산업에서 데이터를 다루며, 문제를 정의하는 방식 자체에 집중해 온 데이터 연구자입니다. 다양한 도메인을 경험하는 과정에서, 겉으로는 다른 문제들이 실제로는 유사한 문제 구조를 가지고 있다는 것을 발견했습니다. 모델의 복잡도를 높이기보다, 데이터를 어떤 단위로 보고 어떻게 구조화할 것인지에 대한 질문에서 출발해 실제로 작동하는 해법을 만들어 왔습니다. Python을 기반으로 데이터의 형태를 재구성하고, 실험을 통해 문제를 다시 정의하는 과정을 탐구하며, 산업 현장과 연구 사이를 연결하는 데이터 사이언스를 지향하고 있습니다.",
     bioEn: "A data researcher who has worked with data across diverse industries, focusing on how problems themselves are defined. Through experience across many domains, I discovered that problems that look different on the surface often share a similar underlying structure. Rather than increasing model complexity, I've built solutions that actually work by starting from questions about what unit to view data as and how to structure it. Using Python, I explore the process of reshaping data and redefining problems through experimentation, aiming for a practice of data science that bridges industry and research.",
     descriptionKo: "이 발표는 서로 다른 산업에서 다루는 데이터가 얼마나 달라 보이든, 실제 문제 해결 과정에서는 공통된 구조가 반복된다는 관점에서 출발합니다. 유전자 발현 데이터, 금융 거래 데이터, 반도체 제조 공정의 시계열 데이터라는 전혀 다른 사례들을 통해, 모델의 성능보다 데이터를 어떻게 정의하고 구조화하느냐가 결과에 더 큰 영향을 미칠 수 있음을 보여줍니다. 각 도메인에서 발생한 batch effect, leakage, overfitting과 같은 문제를 어떻게 데이터 단위의 재정의로 해결해 나갔는지를 설명하며, Python을 활용해 이러한 과정을 반복적으로 실험하고 검증하는 방식을 공유합니다. 데이터를 다시 바라보고 문제를 새롭게 정의할 수 있는 관점을 얻을 수 있도록 하는 것을 목표로 합니다.",
     descriptionEn: "This talk starts from the perspective that however different the data across industries may look, the actual problem-solving process keeps running into common structural patterns. Through three very different cases — gene-expression data, financial-transaction data, and semiconductor-manufacturing time-series data — it shows that how you define and structure your data can influence outcomes more than model performance does. I'll walk through how issues such as batch effects, leakage, and overfitting that arose in each domain were resolved by redefining the unit of data, and share how to iteratively experiment with and validate that process using Python. The goal is to give you a perspective from which you can re-examine your data and redefine your problems.",
+    youtubeId: "Zn-GPngY9Dk"
   },
   "cpython-3-15": {
     bioKo: "CPython 내부 구조, 최적화, 고성능 컴퓨팅을 전문 분야로 합니다.  \nGPU 가속과 CPU 벡터화에 매료되어, ML 시스템에서 출발해 CPython 코어 리서치 엔지니어로 성장해 왔습니다.  \nAI·수학·물리 분야에서 8년 넘게 팀을 이끌어 왔고, 여러 PyCon 무대에 서 왔습니다.  \n러시아 최고 명문 중 하나인 모스크바 물리기술대학교(MIPT)에서 강의하고 있습니다.  \n세계 곳곳의 PyCon에서 발표하고, CPython을 주제로 곡을 만들기도 합니다.  \n강연·협업 제안을 환영합니다.",
     bioEn: "Specializes in CPython internals, optimization, and high-performance computing.  \nDriven by GPU acceleration, CPU vectorization. Evolved from ML systems to CPython core research engineer.  \n8+ years leading teams in AI, maths, and physics. PyCon speaker.  \nLecturer at Moscow Institute of Physics and Technology – top Russian universities.  \nSpeak in PyCons around the World and creating songs about CPython.\nOpen to talks and collaboration.",
     descriptionKo: "CPython 3.15는 단순한 문법 개선이 아니라, 우리가 파이썬 시스템을 디버깅하고 시작시키고 확장하는 방식 자체를 바꾸는 업데이트들을 가져옵니다.\n\n이 발표에서는 임팩트가 큰 세 가지 주제를 __깊이__ 다룹니다:\n- Tachyon 프로파일링: 낮은 오버헤드로 병목을 찾아내는 방법\n- JIT 업그레이드: 내부 구조, 실제 벤치마크 결과(PyPy/V8 대비), 그리고 다음 행보\n- FreeThreading 업데이트: Go/Java/.NET과 비교했을 때 CPython이 앞서는 지점과 그렇지 않은 지점\n\n이어서 다음 항목들을 __빠르게 훑습니다__:\n- 명시적 lazy import: 앱 시작 속도 개선\n- frozendict와 그 설계\n- comprehension 내부의 unpacking: 한눈에 들어오는 가독성!\n- 기본값이 된 UTF-8: 이제 좀 더 마음이 편해지셨나요?\n\n__형식은 인터랙티브합니다__:  \n청중은 벤치마크 차트를 추측하고, 짧은 코드 예제의 동작을 예측합니다.\n\n__목표__:  \n업데이트를 설명하는 데서 그치지 않고, 발표가 끝난 뒤에도 함께 토론할 만한 날 선 질문을 가지고 자리를 떠나게 하는 것입니다.",
     descriptionEn: "CPython 3.15 brings updates that change how we debug, start, and scale Python systems — not just syntax sugar.\n\nIn this talk, I’ll __go deep__ on 3 high-impact topics:\n- Tachyon profiling: find bottlenecks with low overhead\n- JIT upgrades: internals, benchmark reality (vs PyPy/V8), and what comes next\n- FreeThreading updates vs. Go/Java/.NET, where CPython wins, where it doesn’t\n\nThen I’ll do a __fast sweep__ of:\n- explicit lazy imports: faster startup for your app\n- frozendict, and its design\n- unpacking in comprehensions: your eyes love it!\n- UTF-8 by default: already feeling more confident?\n\n__The format is interactive__:  \nthe audience will guess benchmark charts and predict behavior on short code examples.\n\n__The goal__:  \nis not only to explain updates — but to leave the room with sharp questions worth discussing after the talk.",
+    youtubeId: "XaDQlsxxGVI"
   },
   "llm-observability": {
     bioKo: "WhaTap 에이전트 개발자",
     bioEn: "Agent developer at WhaTap.",
     descriptionKo: "LLM 서비스는 구축보다 안정적 운영이 더 어렵습니다. 기존 APM으로는 커버할 수 없는 토큰 비용 폭발, 응답 지연, 할루시네이션 등 LLM 특유의 과제를 살펴보고, 이를 감지/대응 하기 위한 LLM Observability 만의 핵심 메트릭을 소개하며, 모니터링에서는, LLM을 어떻게 대응해야 하는지의 대한 전략을 공유합니다.",
     descriptionEn: "Running LLM services reliably is harder than building them. This talk looks at LLM-specific challenges that traditional APM can't cover — runaway token costs, response latency, hallucinations — introduces the core metrics unique to LLM Observability for detecting and responding to them, and shares strategies for how to deal with LLMs from within your monitoring layer.",
+    youtubeId: "gz2LONnl8bw"
   },
   "tbd-lee": {
     bioKo: "Neovim과 운명공동체가 된 지 4년차입니다. 프로그래밍 퍼즐과 yak shaving을 즐기는, 말하자면 \"목적지보다 도중에 만나는 털 깎기 자체가 재미있는 사람\"입니다. 여러 커뮤니티를 운영하며 사람들이 어우러져 지내는 문화에 관심이 많습니다. INTP와 ENFP를 오가는 하이브리드형입니다.",
     bioEn: "Bound to Neovim for four years running. I enjoy programming puzzles and yak shaving — in other words, the kind of person who finds \"the yak shaving along the way more fun than reaching the destination.\" I run several communities and care deeply about cultures where people come together. A hybrid who oscillates between INTP and ENFP.",
     descriptionKo: "AI가 다 짜주는 시대에, 브라우저를 파이썬으로 직접 만들어보는 건 무슨 의미일까?\" 이 질문에서 출발한 스터디, 그리고 끝까지 가지 못한 기록. 책과 다른 추상화 설계, 파이썬 생태계 탐험(uv·ruff·basedpyright), AI 시대에도 리터러시를 기르는 훈련에 대해 이야기합니다.",
     descriptionEn: "\"In an era where AI writes everything for you, what does it mean to build a browser from scratch in Python?\" — this is the record of a study group that started from that question, and didn't quite make it all the way through. I'll talk about abstraction designs that diverge from the book, exploring the Python ecosystem (uv, ruff, basedpyright), and training literacy even in the age of AI.",
+    youtubeId: "1TF3nI0K5DE"
   },
 };
