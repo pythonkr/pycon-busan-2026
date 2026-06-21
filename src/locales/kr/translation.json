@@ -108,6 +108,10 @@
   "timetableDetailSessionIntro": "세션 소개",
   "timetableDetailSpeakerIntro": "발표자 소개",
   "timetableDetailPlaceholder": "해당 정보가 아직 준비되지 않았습니다. 확정되는 대로 업데이트됩니다.",
+  "timetableDetailVideo": "발표 영상",
+  "timetableDetailSlides": "발표자료",
+  "timetableDetailSlidesDownload": "다운로드",
+  "timetableDetailSlidesView": "새 탭에서 보기",
 
   "communities": "오픈소스 커뮤니티",
   "communitiesHeading": "오픈소스 커뮤니티",

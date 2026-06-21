@@ -108,6 +108,10 @@
   "timetableDetailSessionIntro": "Session Overview",
   "timetableDetailSpeakerIntro": "Speaker Bio",
   "timetableDetailPlaceholder": "This information is not ready yet. It will be updated once confirmed.",
+  "timetableDetailVideo": "Recording",
+  "timetableDetailSlides": "Slides",
+  "timetableDetailSlidesDownload": "Download",
+  "timetableDetailSlidesView": "Open in new tab",
 
   "communities": "Open Source Communities",
   "communitiesHeading": "Open Source Communities",
