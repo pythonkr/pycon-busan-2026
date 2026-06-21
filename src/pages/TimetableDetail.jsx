@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { findSessionByCode } from "../data/schedule";
 import { sessionDetails } from "../data/sessionDetails";
 import { speakerAvatars } from "../data/speakerAvatars";
+import { sessionSlides } from "../data/sessionSlides";
 import "./TimetableDetail.css";
 
 function TimeRange({ start, end }) {
@@ -53,6 +54,8 @@ function TimetableDetail() {
 
   const description = pickLang(detail.descriptionKo, detail.descriptionEn, isEn);
   const bio = pickLang(detail.bioKo, detail.bioEn, isEn);
+  const youtubeId = detail.youtubeId;
+  const slidesUrl = sessionSlides[code];
 
   useEffect(() => {
     window.scrollTo({top: 0});
@@ -97,6 +100,52 @@ function TimetableDetail() {
             {description || t("timetableDetailPlaceholder")}
           </div>
         </section>
+
+        {youtubeId && (
+          <section className="tt-detail-section">
+            <h2 className="section-heading">{t("timetableDetailVideo")}</h2>
+            <div className="video-embed">
+              <iframe
+                src={`https://www.youtube.com/embed/${youtubeId}`}
+                title={title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </section>
+        )}
+
+        {slidesUrl && (
+          <section className="tt-detail-section">
+            <h2 className="section-heading">{t("timetableDetailSlides")}</h2>
+            <article className="slides-card">
+              <div className="slides-thumb" aria-hidden="true">
+                <span className="slides-thumb-ext">PDF</span>
+              </div>
+              <div className="slides-info">
+                <p className="slides-name">{title}</p>
+                <p className="slides-format">PDF</p>
+                <div className="slides-actions">
+                  <a
+                    href={slidesUrl}
+                    download={`${code}.pdf`}
+                    className="slides-btn slides-btn-primary"
+                  >
+                    ⬇ {t("timetableDetailSlidesDownload")}
+                  </a>
+                  <a
+                    href={slidesUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="slides-btn slides-btn-ghost"
+                  >
+                    ↗ {t("timetableDetailSlidesView")}
+                  </a>
+                </div>
+              </div>
+            </article>
+          </section>
+        )}
 
         <section className="tt-detail-section">
           <h2 className="section-heading">{t("timetableDetailSpeakerIntro")}</h2>

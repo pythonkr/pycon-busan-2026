@@ -1,6 +1,9 @@
 // 세션 상세 정보: bio / description 언어별 텍스트
 // 각 세션의 code를 키로 하며, 값은 { bioKo, bioEn, descriptionKo, descriptionEn }
 // 비어있는 필드는 TimetableDetail에서 다른 언어로 폴백되거나 placeholder 표시
+//
+// (선택) youtubeId: "VIDEO_ID"  → 발표 영상 섹션이 노출됨 (예: youtu.be/dQw4w9WgXcQ 의 dQw4w9WgXcQ)
+//        발표자료(PDF)는 여기가 아니라 src/files/slides/<code>.pdf 로 파일을 올리면 자동 연결됨
 
 export const sessionDetails = {
   "keynote-1": {
