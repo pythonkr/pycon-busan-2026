@@ -101,6 +101,25 @@ function TimetableDetail() {
           </div>
         </section>
 
+        <section className="tt-detail-section">
+          <h2 className="section-heading">{t("timetableDetailSpeakerIntro")}</h2>
+          <article className="speaker-card">
+            <div className="speaker-avatar">
+              {avatarUrl ? (
+                <img src={avatarUrl} alt={speakerName} />
+              ) : (
+                <div className="speaker-avatar-placeholder">
+                  {speakerInitial}
+                </div>
+              )}
+            </div>
+            <div className="speaker-info">
+              <h3 className="speaker-name">{speakerName}</h3>
+              <p className="speaker-bio">{bio || t("timetableDetailPlaceholder")}</p>
+            </div>
+          </article>
+        </section>
+
         {youtubeId && (
           <section className="tt-detail-section">
             <h2 className="section-heading">{t("timetableDetailVideo")}</h2>
@@ -146,25 +165,6 @@ function TimetableDetail() {
             </article>
           </section>
         )}
-
-        <section className="tt-detail-section">
-          <h2 className="section-heading">{t("timetableDetailSpeakerIntro")}</h2>
-          <article className="speaker-card">
-            <div className="speaker-avatar">
-              {avatarUrl ? (
-                <img src={avatarUrl} alt={speakerName} />
-              ) : (
-                <div className="speaker-avatar-placeholder">
-                  {speakerInitial}
-                </div>
-              )}
-            </div>
-            <div className="speaker-info">
-              <h3 className="speaker-name">{speakerName}</h3>
-              <p className="speaker-bio">{bio || t("timetableDetailPlaceholder")}</p>
-            </div>
-          </article>
-        </section>
       </div>
     </div>
   );
